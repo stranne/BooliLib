@@ -1,13 +1,14 @@
-using System;
 using Xunit;
+using Stranne.BooliLib;
 
 namespace Stranne.BooliLib.Tests
 {
-    public class UnitTest1
+    public class BooliServiceTest
     {
         [Fact]
         public void Test1()
         {
+            new BooliService("", "");
         }
     }
 }
