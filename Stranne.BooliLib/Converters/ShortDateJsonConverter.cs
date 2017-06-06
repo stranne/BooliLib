@@ -12,7 +12,7 @@ namespace Stranne.BooliLib.Converters
                 return;
             }
 
-            var date = (DateTime)value;
+            var date = (DateTimeOffset)value;
             writer.WriteValue(date.ToString("yyyyMMdd"));
         }
 
@@ -25,7 +25,7 @@ namespace Stranne.BooliLib.Converters
 
         public override bool CanConvert(Type objectType)
         {
-            return objectType == typeof(DateTime) || objectType == typeof(DateTime?);
+            return objectType == typeof(DateTimeOffset) || objectType == typeof(DateTimeOffset?);
         }
     }
 }

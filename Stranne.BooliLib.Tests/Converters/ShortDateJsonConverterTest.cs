@@ -11,13 +11,13 @@ namespace Stranne.BooliLib.Tests.Converters
     {
         public static IEnumerable<object[]> WriteJsonData => new[]
         {
-            new object[] { new DateTime(2014, 1, 10), "20140110" }
+            new object[] { new DateTimeOffset(2014, 1, 10, 0, 0, 0, new TimeSpan(0)), "20140110" },
+            new object[] { null, "null" }
         };
-
-
+        
         [Theory]
         [MemberData(nameof(WriteJsonData))]
-        public void WriuteJson(DateTime value, string expected)
+        public void WriuteJson(DateTimeOffset? value, string expected)
         {
             var actual = JsonConvert.SerializeObject(value, new ShortDateJsonConverter()).Trim('"');
 
