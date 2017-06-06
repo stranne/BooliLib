@@ -9,3 +9,29 @@ before_build:
 build:
     project: Stranne.BooliLib.sln
     verbosity: quiet
+before_test:
+- ps: >-
+    $nugetPackagePath = $ENV:USERPROFILE + '\.nuget\packages'
+
+    nuget install OpenCover -Version 4.6.690 -o $nugetPackagePath
+test_script:
+- ps: >-
+    New-Item -Force -ItemType directory -Path ($ENV:APPVEYOR_BUILD_FOLDER + '\artifacts')
+
+    $resultsFile = $ENV:APPVEYOR_BUILD_FOLDER + '\artifacts\Stranne.BooliLib_coverage.xml'
+
+    $openCoverConsole = $ENV:USERPROFILE + '\.nuget\packages\OpenCover.4.6.690\tools\OpenCover.Console.exe'
+
+    $target = '-target:C:\Program Files\dotnet\dotnet.exe'
+    
+    Set-Location "$ENV:APPVEYOR_BUILD_FOLDER\src\Stranne.BooliLib.Tests"
+
+    $targetArgs = '-targetargs: test -c ' + $ENV:CONFIGURATION
+
+    $filter = '-filter:+[Stranne.BooliLib]* -[Stranne.BooliLib.Tests]*'
+
+    $output = '-output:' + $resultsFile
+
+    & $openCoverConsole $target $targetArgs '-register:user' $filter '-hideskipped:Filter' '-returntargetcode' '-mergeoutput' $output '-oldStyle'
+artifacts:
+- path: artifacts\Stranne.VasttrafikNET_coverage.xml
