@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
+using Xunit;
+
+namespace Stranne.BooliLib.Tests
+{
+    public class MockHttpMessageHandler : HttpMessageHandler
+    {
+        private readonly object _requestLock = new object();
+
+        private readonly IDictionary<KeyValuePair<string, HttpMethod>, int> _request = new Dictionary<KeyValuePair<string, HttpMethod>, int>();
+
+        public Func<HttpRequestMessage, CancellationToken, HttpResponseMessage> SendAssyncAction { get; set; }
+
+        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            SaveRequest(request);
+            return await Task.FromResult(SendAssyncAction.Invoke(request, cancellationToken));
+        }
+
+        private void SaveRequest(HttpRequestMessage request)
+        {
+            var key = new KeyValuePair<string, HttpMethod>(request.RequestUri.AbsoluteUri, request.Method);
+            lock (_requestLock)
+            {
+                if (_request.TryGetValue(key, out int requestedTimes))
+                {
+                    _request[key] = ++requestedTimes;
+                }
+                else
+                {
+                    _request.Add(key, 1);
+                }
+            }
+        }
+
+        public void VerifyRequest(string absoluteUrl, HttpMethod httpMethod, int expectedRequestedTimes = 1)
+        {
+            var key = new KeyValuePair<string, HttpMethod>(absoluteUrl, httpMethod);
+            _request.TryGetValue(key, out int requestedTimes);
+
+            Assert.True(expectedRequestedTimes == requestedTimes, $"Expected {expectedRequestedTimes} calls but found {requestedTimes} calls for request {httpMethod.Method} {absoluteUrl}");
+        }
+    }
+}

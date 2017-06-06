@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Stranne.BooliLib.Tests.Helpers
 {
-    [Trait("Area", "Services")]
+    [Trait("Area", "Helpers")]
     public class AuthenticationHelperTest
     {
         [Theory]
