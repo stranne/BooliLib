@@ -1,0 +1,45 @@
+﻿{
+  "listings":
+  [
+    {
+      "booliId": 2338291,
+      "listPrice": 4675000,
+      "published": "2017-05-26 15:21:30",
+      "source":
+      {
+        "id": 1499,
+        "name": "BOSTHLM",
+        "url": "http://www.bosthlm.se/",
+        "type": "Broker"
+      },
+      "location":
+      {
+        "namedAreas":
+        [
+          "Vasastan"
+        ],
+        "address":
+        {
+          "streetAddress": "Roslagsgatan 23"
+        },
+        "region":
+        {
+          "municipalityName": "Stockholm",
+          "countyName": "Stockholms län"
+        },
+        "position":
+        {
+          "longitude": 18.05882873,
+          "latitude": 59.34733169
+        }
+      },
+      "objectType": "Lägenhet",
+      "rooms": 2,
+      "livingArea": 50.5,
+      "rent": 2382,
+      "floor": 3,
+      "url": "https://www.booli.se/annons/2338291",
+      "pageviews": 55
+    }
+  ]
+}

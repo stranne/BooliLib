@@ -25,6 +25,7 @@ namespace Stranne.BooliLib.Services
             return json;
         }
 
+        /// <inheritdoc />
         public void Dispose()
         {
             HttpClient.Dispose();

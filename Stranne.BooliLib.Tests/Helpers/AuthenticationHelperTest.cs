@@ -9,7 +9,7 @@ namespace Stranne.BooliLib.Tests.Helpers
     public class AuthenticationHelperTest
     {
         [Theory]
-        [InlineData("Abc", "123")]
+        [InlineData(TestConstants.CallerId, TestConstants.Key)]
         public void GetAuthenticationQuery(string callerId, string key)
         {
             var actual = AuthenticationHelper.GetAuthenticationQuery(callerId, key);

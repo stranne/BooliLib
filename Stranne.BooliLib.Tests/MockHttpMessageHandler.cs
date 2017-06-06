@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using Stranne.BooliLib.Tests.Helpers;
 using Xunit;
 
 namespace Stranne.BooliLib.Tests
@@ -23,7 +25,9 @@ namespace Stranne.BooliLib.Tests
 
         private void SaveRequest(HttpRequestMessage request)
         {
-            var key = new KeyValuePair<string, HttpMethod>(request.RequestUri.AbsoluteUri, request.Method);
+            var url = NetworkHelper.RemoveAuthenticationQueries(request.RequestUri.AbsoluteUri);
+            
+            var key = new KeyValuePair<string, HttpMethod>(url, request.Method);
             lock (_requestLock)
             {
                 if (_request.TryGetValue(key, out int requestedTimes))
@@ -39,8 +43,13 @@ namespace Stranne.BooliLib.Tests
 
         public void VerifyRequest(string absoluteUrl, HttpMethod httpMethod, int expectedRequestedTimes = 1)
         {
+            absoluteUrl = NetworkHelper.RemoveAuthenticationQueries(absoluteUrl);
             var key = new KeyValuePair<string, HttpMethod>(absoluteUrl, httpMethod);
-            _request.TryGetValue(key, out int requestedTimes);
+            int requestedTimes;
+            lock (_requestLock)
+            {
+                _request.TryGetValue(key, out requestedTimes);
+            }
 
             Assert.True(expectedRequestedTimes == requestedTimes, $"Expected {expectedRequestedTimes} calls but found {requestedTimes} calls for request {httpMethod.Method} {absoluteUrl}");
         }

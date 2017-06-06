@@ -7,7 +7,18 @@ namespace Stranne.BooliLib.Tests.Helpers
 {
     public class NetworkHelper
     {
-        internal static (Mock<NetworkService> mockNetworkService, MockHttpMessageHandler mockHttpMessageHandler) SetUpNetworkServiceMock(string absoluteUrl, HttpResponseMessage httpResponseMessage)
+        internal static (Mock<NetworkService> mockNetworkService, MockHttpMessageHandler mockHttpMessageHandler)
+            SetUpNetworkServiceMock(string absoluteUrl, string jsonContent)
+        {
+            var httpResponseMessage = new HttpResponseMessage
+            {
+                Content = new StringContent(jsonContent)
+            };
+            return SetUpNetworkServiceMock(absoluteUrl, httpResponseMessage);
+        }
+
+        internal static (Mock<NetworkService> mockNetworkService, MockHttpMessageHandler mockHttpMessageHandler)
+            SetUpNetworkServiceMock(string absoluteUrl, HttpResponseMessage httpResponseMessage)
         {
             var httpMessageHandler = new MockHttpMessageHandler
             {
@@ -17,7 +28,7 @@ namespace Stranne.BooliLib.Tests.Helpers
                     if (!CompareUri(uri, absoluteUrl) || httpRequestMessage.Method != HttpMethod.Get)
                     {
                         throw new ArgumentException(
-                            $"Incorrect url; expected: {absoluteUrl}, actual: {uri.AbsoluteUri}");
+                            $"Incorrect url; expected: {absoluteUrl}, actual: {RemoveAuthenticationQueries(uri.AbsoluteUri)}");
                     }
 
                     return httpResponseMessage;
@@ -32,10 +43,20 @@ namespace Stranne.BooliLib.Tests.Helpers
 
         internal static bool CompareUri(Uri uri, string absoluteUrl)
         {
-            return Uri.Compare(uri,
+            return Uri.Compare(new Uri(RemoveAuthenticationQueries(uri.AbsoluteUri)),
                 new Uri(absoluteUrl),
                 UriComponents.AbsoluteUri, UriFormat.SafeUnescaped,
                 StringComparison.OrdinalIgnoreCase) == 0;
+        }
+        
+        public static string RemoveAuthenticationQueries(string url)
+        {
+            if (url.Contains("callerId"))
+            {
+                url = url.Substring(0, url.IndexOf("callerId", StringComparison.OrdinalIgnoreCase) - 1);
+            }
+
+            return url;
         }
     }
 }

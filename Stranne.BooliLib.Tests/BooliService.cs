@@ -10,5 +10,11 @@ namespace Stranne.BooliLib.Tests
         {
             new BooliService("", "");
         }
+
+        [Fact]
+        public void Dispose()
+        {
+            new BooliService(TestConstants.CallerId, TestConstants.Key).Dispose();
+        }
     }
 }

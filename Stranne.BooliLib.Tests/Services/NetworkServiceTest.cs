@@ -9,7 +9,7 @@ namespace Stranne.BooliLib.Tests.Services
     public class NetworkServiceTest
     {
         [Theory]
-        [InlineData("https://api.booli.se/", "Test")]
+        [InlineData(TestConstants.AbsoluteUrl, TestConstants.TestData)]
         public async Task DownloadStringAsync(string absoluteUrl, string json)
         {
             var httpResponseMessage = new HttpResponseMessage
