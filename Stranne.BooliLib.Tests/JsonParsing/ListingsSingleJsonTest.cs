@@ -32,8 +32,11 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[0].ObjectType", "Lägenhet" },
             { "Listings[0].Rooms", 2f },
             { "Listings[0].LivingArea", 50.5f },
+            { "Listings[0].AdditionalArea", null },
+            { "Listings[0].PlotArea", null },
             { "Listings[0].Rent", 2382f },
             { "Listings[0].Floor", 3f },
+            { "Listings[0].ConstructionYear", null },
             { "Listings[0].Url", "https://www.booli.se/annons/2338291" },
             { "Listings[0].Pageviews", 55 }
         };

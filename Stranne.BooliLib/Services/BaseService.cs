@@ -42,7 +42,7 @@ namespace Stranne.BooliLib.Services
         public async Task<BooliResult<TResult, TSearchOptions>> GetAsync<TResult, TSearchOptions>(string name, TSearchOptions searchOptions)
             where TResult : IBooliId
         {
-            var query = QueryService.GetQuery(searchOptions);
+            var query = QueryHelper.GetQuery(searchOptions);
             var json = await GetAsync(name, query);
 
             var jsonObject = JObject.Parse(json);

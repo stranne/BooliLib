@@ -6,9 +6,9 @@ using Newtonsoft.Json;
 using Stranne.BooliLib.Attributes;
 using Stranne.BooliLib.Extension;
 
-namespace Stranne.BooliLib.Services
+namespace Stranne.BooliLib.Helpers
 {
-    internal static class QueryService
+    internal static class QueryHelper
     {
         public static IDictionary<string, string> GetQuery<TSearchOptions>(TSearchOptions searchOptions)
         {

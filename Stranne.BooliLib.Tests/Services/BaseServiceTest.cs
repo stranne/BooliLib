@@ -24,9 +24,33 @@ namespace Stranne.BooliLib.Tests.Services
 
             var actual = await sut.GetAsync<ListedObject>("listings", 2338291);
 
+            mockHttpMessageHandler.VerifyRequest(TestConstants.AbsoluteListingsUrl, HttpMethod.Get);
             Assert.NotNull(actual);
             Assert.Equal(actual.BooliId, 2338291);
-            mockHttpMessageHandler.VerifyRequest(TestConstants.AbsoluteListingsUrl, HttpMethod.Get);
+        }
+
+        [Fact]
+        public async Task GetAsyncMultiple()
+        {
+            const string absoluteUrl = "https://api.booli.se/listings?q=nacka";
+            var (mockNetworkService, mockHttpMessageHandler) = NetworkHelper.SetUpNetworkServiceMock(absoluteUrl, JsonFile.ListingsMultiple);
+            var sut = GetBaseService();
+            sut.NetworkService = mockNetworkService.Object;
+            var searchOption = new ListedSearchOption
+            {
+                Query = "nacka"
+            };
+
+            var actual = await sut.GetAsync<ListedObject, ListedSearchOption>("listings", searchOption);
+
+            mockHttpMessageHandler.VerifyRequest(absoluteUrl, HttpMethod.Get);
+            Assert.NotNull(actual);
+            Assert.Equal(849, actual.TotalCount);
+            Assert.Equal(5, actual.Count);
+            Assert.Equal(5, actual.Limit);
+            Assert.Equal(0, actual.Offset);
+            //Assert.Equal(0, actual.SearchParameters.UpcomingSale); // TODO ?
+            Assert.Contains(76, actual.SearchParameters.AreaId);
         }
 
         public static IEnumerable<object[]> BuildQueryMemberData => new[]

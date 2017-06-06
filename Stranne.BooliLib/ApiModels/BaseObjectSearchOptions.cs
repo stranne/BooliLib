@@ -1,5 +1,6 @@
 using System;
 using Newtonsoft.Json;
+using Stranne.BooliLib.Converters;
 
 namespace Stranne.BooliLib.ApiModels
 {
@@ -27,6 +28,7 @@ namespace Stranne.BooliLib.ApiModels
         /// <summary>
         /// Area id
         /// </summary>
+        [JsonConverter(typeof(ArrayIntJsonConverter))]
         public int[] AreaId { get; set; }
 
         /// <summary>

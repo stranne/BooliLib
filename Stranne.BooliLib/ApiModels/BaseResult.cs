@@ -1,4 +1,6 @@
 using System;
+using Newtonsoft.Json;
+using Stranne.BooliLib.Converters;
 
 namespace Stranne.BooliLib.ApiModels
 {
@@ -41,22 +43,27 @@ namespace Stranne.BooliLib.ApiModels
         /// <summary>
         /// Rooms
         /// </summary>
-        public float Rooms { get; set; }
+        public float? Rooms { get; set; }
 
         /// <summary>
         /// Living area
         /// </summary>
-        public float LivingArea { get; set; }
+        public float? LivingArea { get; set; }
+
+        /// <summary>
+        /// Additional area
+        /// </summary>
+        public float? AdditionalArea { get; set; }
 
         /// <summary>
         /// Rent
         /// </summary>
-        public float Rent { get; set; }
+        public float? Rent { get; set; }
 
         /// <summary>
         /// Floor
         /// </summary>
-        public float Floor { get; set; }
+        public float? Floor { get; set; }
 
         /// <summary>
         /// Plot area

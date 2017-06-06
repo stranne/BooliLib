@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Stranne.BooliLib.ApiModels
 {
@@ -40,6 +41,7 @@ namespace Stranne.BooliLib.ApiModels
         /// <summary>
         /// Search parameters
         /// </summary>
+        [JsonProperty("searchParams")]
         public TSearchParameters SearchParameters { get; set; }
     }
 }
