@@ -24,7 +24,7 @@ test_script:
 
     $target = '-target:C:\Program Files\dotnet\dotnet.exe'
     
-    Set-Location "$ENV:APPVEYOR_BUILD_FOLDER\src\Stranne.BooliLib.Tests"
+    Set-Location "$ENV:APPVEYOR_BUILD_FOLDER\Stranne.BooliLib.Tests"
 
     $targetArgs = '-targetargs: test -c ' + $ENV:CONFIGURATION
 
@@ -34,4 +34,4 @@ test_script:
 
     & $openCoverConsole $target $targetArgs '-register:user' $filter '-hideskipped:Filter' '-returntargetcode' '-mergeoutput' $output '-oldStyle'
 artifacts:
-- path: artifacts\Stranne.VasttrafikNET_coverage.xml
+- path: artifacts\Stranne.BooliLib_coverage.xml
