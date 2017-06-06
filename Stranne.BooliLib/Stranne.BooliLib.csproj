@@ -28,4 +28,8 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+
 </Project>
