@@ -7,11 +7,6 @@ namespace Stranne.BooliLib.Converters
     {
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            if (value == null)
-            {
-                return;
-            }
-
             var date = (DateTimeOffset)value;
             writer.WriteValue(date.ToString("yyyyMMdd"));
         }
