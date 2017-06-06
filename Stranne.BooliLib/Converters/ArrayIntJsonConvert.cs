@@ -21,12 +21,7 @@ namespace Stranne.BooliLib.Converters
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            if (reader.TokenType == JsonToken.Integer)
-            {
-                return new[] {Convert.ToInt32(reader.Value)};
-            }
-
-            return serializer.Deserialize<List<int>>(reader).ToArray();
+            return new[] {Convert.ToInt32(reader.Value)};
         }
 
         public override bool CanConvert(Type objectType)
