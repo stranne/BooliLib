@@ -33,5 +33,13 @@ test_script:
     $output = '-output:' + $resultsFile
 
     & $openCoverConsole $target $targetArgs '-register:user' $filter '-hideskipped:Filter' '-returntargetcode' '-mergeoutput' $output '-oldStyle'
+after_test:
+- ps: >-
+    $ENV:PATH = 'C:\\Python34;C:\\Python34\\Scripts;' + $ENV:PATH
+    
+    python -m pip install --upgrade pip
+    
+    pip install git+git://github.com/codecov/codecov-python.git
+    codecov -f $resultsFile -X gcov
 artifacts:
 - path: artifacts\Stranne.BooliLib_coverage.xml
