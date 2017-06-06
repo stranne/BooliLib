@@ -23,10 +23,8 @@ test_script:
     $openCoverConsole = $ENV:USERPROFILE + '\.nuget\packages\OpenCover.4.6.690\tools\OpenCover.Console.exe'
 
     $target = '-target:C:\Program Files\dotnet\dotnet.exe'
-    
-    Set-Location "$ENV:APPVEYOR_BUILD_FOLDER\Stranne.BooliLib.Tests"
 
-    $targetArgs = '-targetargs: test -c ' + $ENV:CONFIGURATION
+    $targetArgs = '-targetargs: test .\Stranne.BooliLib.Tests\Stranne.BooliLib.Tests.csproj -c ' + $ENV:CONFIGURATION
 
     $filter = '-filter:+[Stranne.BooliLib]* -[Stranne.BooliLib.Tests]*'
 
