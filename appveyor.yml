@@ -40,6 +40,7 @@ after_test:
     python -m pip install --upgrade pip
     
     pip install git+git://github.com/codecov/codecov-python.git
+
     codecov -f $resultsFile -X gcov
 artifacts:
 - path: artifacts\Stranne.BooliLib_coverage.xml
