@@ -2,7 +2,10 @@ using System;
 
 namespace Stranne.BooliLib.ApiModels
 {
-    public abstract class BaseResult
+    /// <summary>
+    /// Base result
+    /// </summary>
+    public abstract class BaseResult : IBooliId
     {
         /// <summary>
         /// Booli id

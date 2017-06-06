@@ -1,0 +1,185 @@
+﻿{
+  "totalCount": 849,
+  "count": 5,
+  "listings": [
+    {
+      "booliId": 2347066,
+      "listPrice": 1275000,
+      "published": "2017-06-06 18:54:37",
+      "source":
+      {
+        "id": 115712249,
+        "name": "Classic Home Fastighetsmäkleri",
+        "url": "http://www.classichome.se/",
+        "type": "Broker"
+      },
+      "location":
+      {
+        "namedAreas":
+        [
+          "Saltsjöbaden"
+        ],
+        "address":
+        {
+          "streetAddress": "Karl Gerhards väg 23"
+        },
+        "region":
+        {
+          "municipalityName": "Nacka",
+          "countyName": "Stockholms län"
+        },
+        "position":
+        {
+          "longitude": 18.30574393,
+          "latitude": 59.27452078
+        }
+      },
+      "objectType": "Lägenhet",
+      "rooms": 1,
+      "livingArea": 24,
+      "rent": 1353,
+      "constructionYear": 1964,
+      "url": "https://www.booli.se/annons/2347066"
+    },
+    {
+      "booliId": 2341646,
+      "listPrice": 2195000,
+      "published": "2017-06-06 01:03:21",
+      "source": {
+        "id": 58,
+        "name": "Svenska Mäklarhuset",
+        "url": "http://www.svenskamaklarhuset.se/",
+        "type": "Broker"
+      },
+      "location": {
+        "namedAreas": [
+          "Saltsjöbaden"
+        ],
+        "address": {
+          "streetAddress": "Ljuskärrsvägen 71"
+        },
+        "region": {
+          "municipalityName": "Nacka",
+          "countyName": "Stockholms län"
+        },
+        "position": {
+          "longitude": 18.26883674,
+          "latitude": 59.28495073
+        }
+      },
+      "objectType": "Lägenhet",
+      "rooms": 2,
+      "livingArea": 63.5,
+      "rent": 3360,
+      "floor": 1,
+      "url": "https://www.booli.se/annons/2341646"
+    },
+    {
+      "booliId": 2343172,
+      "listPrice": 2895000,
+      "published": "2017-06-05 23:30:09",
+      "source": {
+        "id": 1570,
+        "name": "SkandiaMäklarna",
+        "url": "http://www.skandiamaklarna.se/",
+        "type": "Broker"
+      },
+      "location": {
+        "namedAreas": [
+          "Finntorp"
+        ],
+        "address": {
+          "streetAddress": "Fredrik Jahns gränd 6"
+        },
+        "region": {
+          "municipalityName": "Nacka",
+          "countyName": "Stockholms län"
+        },
+        "position": {
+          "longitude": 18.13700112,
+          "latitude": 59.30770373
+        }
+      },
+      "objectType": "Lägenhet",
+      "rooms": 2,
+      "livingArea": 58,
+      "rent": 2780,
+      "constructionYear": 1951,
+      "url": "https://www.booli.se/annons/2343172"
+    },
+    {
+      "booliId": 2346696,
+      "listPrice": 16900000,
+      "published": "2017-06-05 19:28:22",
+      "source": {
+        "id": 300,
+        "name": "Schneider & Co AB",
+        "url": "http://www.schneiderco.se/",
+        "type": "Broker"
+      },
+      "location": {
+        "namedAreas": [
+          "Södra Lännersta"
+        ],
+        "address": {
+          "streetAddress": "Örnbergsstigen 6"
+        },
+        "region": {
+          "municipalityName": "Nacka",
+          "countyName": "Stockholms län"
+        },
+        "position": {
+          "longitude": 18.24811838,
+          "latitude": 59.30379927
+        }
+      },
+      "objectType": "Villa",
+      "rooms": 8,
+      "livingArea": 240,
+      "plotArea": 2022,
+      "constructionYear": 2004,
+      "url": "https://www.booli.se/annons/2346696"
+    },
+    {
+      "booliId": 2346548,
+      "listPrice": 5395000,
+      "published": "2017-06-05 16:07:45",
+      "source": {
+        "id": 278,
+        "name": "Svenska Hem",
+        "url": "http://www.sehem.se/",
+        "type": "Broker"
+      },
+      "location": {
+        "namedAreas": [
+          "Finnboda Hamn"
+        ],
+        "address": {
+          "streetAddress": "Finnboda Parkväg 6"
+        },
+        "region": {
+          "municipalityName": "Nacka",
+          "countyName": "Stockholms län"
+        },
+        "position": {
+          "longitude": 18.12274218,
+          "latitude": 59.31305129
+        }
+      },
+      "objectType": "Lägenhet",
+      "rooms": 4,
+      "livingArea": 90.5,
+      "additionalArea": 0,
+      "rent": 6005,
+      "floor": 2,
+      "constructionYear": 2006,
+      "url": "https://www.booli.se/annons/2346548"
+    }
+  ],
+  "limit": 5,
+  "offset": 0,
+  "searchParams": {
+    "upcomingSale": 0,
+    "areaId": 76
+  }
+}

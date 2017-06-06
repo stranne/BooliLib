@@ -8,5 +8,9 @@ namespace Stranne.BooliLib
         Task<ListedObject> GetListedAsync(int booliId);
 
         ListedObject GetListed(int booliId);
+
+        Task<BooliResult<ListedObject, ListedSearchOption>> GetListedAsync(ListedSearchOption searchOptions);
+
+        BooliResult<ListedObject, ListedSearchOption> GetListed(ListedSearchOption searchOption);
     }
 }

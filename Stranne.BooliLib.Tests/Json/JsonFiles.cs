@@ -2,6 +2,7 @@
 {
     public enum JsonFile
     {
-        ListingsSingle
+        ListingsSingle,
+        ListingsMultiple
     }
 }

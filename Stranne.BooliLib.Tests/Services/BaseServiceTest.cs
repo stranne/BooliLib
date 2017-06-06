@@ -22,10 +22,10 @@ namespace Stranne.BooliLib.Tests.Services
             var sut = GetBaseService();
             sut.NetworkService = mockNetworkService.Object;
 
-            var actual = await sut.GetAsync<ListingsRoot>("listings", 2338291);
+            var actual = await sut.GetAsync<ListedObject>("listings", 2338291);
 
             Assert.NotNull(actual);
-            Assert.Equal(actual.Listings.Single().BooliId, 2338291);
+            Assert.Equal(actual.BooliId, 2338291);
             mockHttpMessageHandler.VerifyRequest(TestConstants.AbsoluteListingsUrl, HttpMethod.Get);
         }
 

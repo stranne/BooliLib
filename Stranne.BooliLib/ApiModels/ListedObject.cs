@@ -1,5 +1,8 @@
 ﻿namespace Stranne.BooliLib.ApiModels
 {
+    /// <summary>
+    /// Listed object
+    /// </summary>
     public class ListedObject : BaseResult
     {
         /// <summary>

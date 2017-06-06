@@ -1,5 +1,8 @@
 namespace Stranne.BooliLib.ApiModels
 {
+    /// <summary>
+    /// Position result
+    /// </summary>
     public class PositionResult : Position
     {
         /// <summary>

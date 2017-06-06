@@ -1,5 +1,8 @@
 namespace Stranne.BooliLib.ApiModels
 {
+    /// <summary>
+    /// Position
+    /// </summary>
     public class Position
     {
         // TODO add validation?

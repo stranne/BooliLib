@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
+using Stranne.BooliLib.ApiModels;
 using Stranne.BooliLib.Helpers;
 
 namespace Stranne.BooliLib.Services
@@ -27,13 +28,32 @@ namespace Stranne.BooliLib.Services
             _key = key;
         }
 
-        public async Task<T> GetAsync<T>(string featureUrl, int booliId)
+        public async Task<TResult> GetAsync<TResult>(string name, int booliId)
         {
-            var pathUrl = $"{featureUrl}/{booliId}";
-            return await GetAsync<T>(pathUrl);
+            var pathUrl = $"{name}/{booliId}";
+            var json = await GetAsync(pathUrl);
+
+            var jsonObject = JObject.Parse(json);
+            var result = jsonObject[name][0].ToObject<TResult>();
+
+            return result;
         }
 
-        public async Task<T> GetAsync<T>(string relativeUrl, IDictionary<string, string> query = null)
+        public async Task<BooliResult<TResult, TSearchOptions>> GetAsync<TResult, TSearchOptions>(string name, TSearchOptions searchOptions)
+            where TResult : IBooliId
+        {
+            var query = QueryService.GetQuery(searchOptions);
+            var json = await GetAsync(name, query);
+
+            var jsonObject = JObject.Parse(json);
+            var results = jsonObject[name].ToObject<IEnumerable<TResult>>();
+            var booliResult = jsonObject.ToObject<BooliResult<TResult, TSearchOptions>>();
+            booliResult.Result = results;
+
+            return booliResult;
+        }
+
+        private async Task<string> GetAsync(string relativeUrl, IDictionary<string, string> query = null)
         {
             if (query == null)
             {
@@ -42,8 +62,7 @@ namespace Stranne.BooliLib.Services
             relativeUrl = $"{relativeUrl}?{BuildQuery(query)}";
 
             var json = await NetworkService.DownloadStringAsync(relativeUrl);
-            var data = JsonConvert.DeserializeObject<T>(json);
-            return data;
+            return json;
         }
 
         internal string BuildQuery(IDictionary<string, string> queries)

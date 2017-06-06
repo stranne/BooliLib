@@ -2,6 +2,9 @@ using System.Collections.Generic;
 
 namespace Stranne.BooliLib.ApiModels
 {
+    /// <summary>
+    /// Location result
+    /// </summary>
     public class LocationResult
     {
         /// <summary>

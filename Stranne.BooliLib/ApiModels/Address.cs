@@ -1,5 +1,8 @@
 namespace Stranne.BooliLib.ApiModels
 {
+    /// <summary>
+    /// Address
+    /// </summary>
     public class Address
     {
         /// <summary>
