@@ -12,7 +12,7 @@ namespace Stranne.BooliLib.Tests.Helpers
         [InlineData("Abc", "123")]
         public void GetAuthenticationQuery(string callerId, string key)
         {
-            var actual = AuthenticationService.GetAuthenticationQuery(callerId, key);
+            var actual = AuthenticationHelper.GetAuthenticationQuery(callerId, key);
 
             Assert.NotEmpty(actual);
             Assert.Contains(new KeyValuePair<string, string>("callerId", callerId), actual);
@@ -26,7 +26,7 @@ namespace Stranne.BooliLib.Tests.Helpers
         [InlineData("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi feugiat orci ac arcu vulputate aliquet. In hac habitasse platea dictumst. In enim quam, iaculis a gravida suscipit, volutpat ac ipsum. Curabitur euismod orci sit amet tortor suscipit, eu ultricies felis fermentum. Aenean tincidunt convallis risus ac tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque suscipit elit et dignissim semper. Aliquam molestie neque non dui bibendum aliquet. Nunc sed sapien eget velit elementum auctor. Vestibulum turpis quam, efficitur in tempus quis, faucibus id justo. Nam interdum sem a turpis tincidunt maximus. Ut quis nisl sed turpis vulputate sollicitudin. Nulla sit amet arcu iaculis, molestie eros sit amet, bibendum tellus. Cras ut justo turpis. Ut vitae iaculis arcu, sed tempus libero. Quisque et justo metus.", "dafc5ce692c975a0b48cc1c9cca25611690a7174")]
         public void CreateHash(string text, string expected)
         {
-            var actual = AuthenticationService.CreateHash(text);
+            var actual = AuthenticationHelper.CreateHash(text);
             Assert.Equal(expected, actual);
         }
 
@@ -35,7 +35,7 @@ namespace Stranne.BooliLib.Tests.Helpers
         [InlineData(16)]
         public void CreateUniqueLength(int length)
         {
-            var actual = AuthenticationService.CreateUnique(length);
+            var actual = AuthenticationHelper.CreateUnique(length);
             Assert.Equal(length, actual.Length);
         }
 
@@ -43,7 +43,7 @@ namespace Stranne.BooliLib.Tests.Helpers
         [InlineData(16)]
         public void CreateUniqueCharacters(int length)
         {
-            var actual = AuthenticationService.CreateUnique(length);
+            var actual = AuthenticationHelper.CreateUnique(length);
             var regex = new Regex(@"^[a-zA-Z0-9]*$");
             Assert.True(regex.IsMatch(actual));
         }
