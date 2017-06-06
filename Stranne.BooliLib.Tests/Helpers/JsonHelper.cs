@@ -5,7 +5,7 @@ namespace Stranne.BooliLib.Tests.Helpers
 {
     public static class JsonHelper
     {
-        public static string GetJson(JsonFiles jsonFile)
+        public static string GetJson(JsonFile jsonFile)
         {
             var fileName = $"{jsonFile}.json";
             var json = File.ReadAllText($@"Json\{fileName}");

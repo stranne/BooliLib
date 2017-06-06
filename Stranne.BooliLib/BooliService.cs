@@ -8,16 +8,16 @@ namespace Stranne.BooliLib
 {
     public class BooliService : IBooliService, IDisposable
     {
-        private readonly BaseService _baseService;
+        internal readonly BaseService BaseService;
 
         public BooliService(string callerId, string key)
         {
-            _baseService = new BaseService(callerId, key);
+            BaseService = new BaseService(callerId, key);
         }
 
         public async Task<ListedObject> GetListedAsync(int booliId)
         {
-            var listingsRoot = await _baseService.GetAsync<ListingsRoot>("listings", booliId);
+            var listingsRoot = await BaseService.GetAsync<ListingsRoot>("listings", booliId);
             return listingsRoot.Listings.FirstOrDefault();
         }
 
@@ -29,7 +29,7 @@ namespace Stranne.BooliLib
         /// <inheritdoc />
         public void Dispose()
         {
-            _baseService.Dispose();
+            BaseService.Dispose();
         }
     }
 }

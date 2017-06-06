@@ -2,17 +2,19 @@
 using System.Net.Http;
 using Moq;
 using Stranne.BooliLib.Services;
+using Stranne.BooliLib.Tests.Json;
 
 namespace Stranne.BooliLib.Tests.Helpers
 {
     public class NetworkHelper
     {
         internal static (Mock<NetworkService> mockNetworkService, MockHttpMessageHandler mockHttpMessageHandler)
-            SetUpNetworkServiceMock(string absoluteUrl, string jsonContent)
+            SetUpNetworkServiceMock(string absoluteUrl, JsonFile jsonFile)
         {
+            var json = JsonHelper.GetJson(jsonFile);
             var httpResponseMessage = new HttpResponseMessage
             {
-                Content = new StringContent(jsonContent)
+                Content = new StringContent(json)
             };
             return SetUpNetworkServiceMock(absoluteUrl, httpResponseMessage);
         }

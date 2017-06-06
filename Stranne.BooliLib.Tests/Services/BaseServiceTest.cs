@@ -18,8 +18,7 @@ namespace Stranne.BooliLib.Tests.Services
         [Fact]
         public async Task GetAsync()
         {
-            var json = JsonHelper.GetJson(JsonFiles.ListingsSingle);
-            var (mockNetworkService, mockHttpMessageHandler) = NetworkHelper.SetUpNetworkServiceMock(TestConstants.AbsoluteListingsUrl, json);
+            var (mockNetworkService, mockHttpMessageHandler) = NetworkHelper.SetUpNetworkServiceMock(TestConstants.AbsoluteListingsUrl, JsonFile.ListingsSingle);
             var sut = GetBaseService();
             sut.NetworkService = mockNetworkService.Object;
 

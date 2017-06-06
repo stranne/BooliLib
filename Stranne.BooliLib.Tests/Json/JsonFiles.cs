@@ -1,6 +1,6 @@
 ﻿namespace Stranne.BooliLib.Tests.Json
 {
-    public enum JsonFiles
+    public enum JsonFile
     {
         ListingsSingle
     }
