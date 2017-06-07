@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace Stranne.BooliLib.ApiModels
 {
@@ -26,5 +27,16 @@ namespace Stranne.BooliLib.ApiModels
         /// Region
         /// </summary>
         public Region Region { get; set; }
+
+        /// <summary>
+        /// Distance
+        /// </summary>
+        public Distance Distance { get; set; }
+
+        [OnDeserialized]
+        private void OnDeserialized(StreamingContext context)
+        {
+            if (Distance == null) Distance = new Distance();
+        }
     }
 }

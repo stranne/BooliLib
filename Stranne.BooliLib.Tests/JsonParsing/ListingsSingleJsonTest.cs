@@ -24,11 +24,13 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[0].Location.NamedAreas", 1 },
             { "Listings[0].Location.NamedAreas[0]", "Vasastan" },
             { "Listings[0].Location.Address.StreetAddress", "Roslagsgatan 23" },
+            { "Listings[0].Location.Address.City", null },
             { "Listings[0].Location.Region.MunicipalityName", "Stockholm" },
             { "Listings[0].Location.Region.CountyName", "Stockholms län" },
             { "Listings[0].Location.Position.Latitude", 59.34733169d },
             { "Listings[0].Location.Position.Longitude", 18.05882873d },
             { "Listings[0].Location.Position.IsApproximate", null },
+            { "Listings[0].Location.Distance.Ocean", null },
 
             { "Listings[0].ObjectType", "Lägenhet" },
             { "Listings[0].Rooms", 2f },
@@ -37,6 +39,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[0].PlotArea", null },
             { "Listings[0].Rent", 2382f },
             { "Listings[0].Floor", 3f },
+            { "Listings[0].ApartmentNumber", null },
             { "Listings[0].ConstructionYear", null },
             { "Listings[0].Url", "https://www.booli.se/annons/2338291" },
             { "Listings[0].Pageviews", 55 }

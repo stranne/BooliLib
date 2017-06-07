@@ -26,12 +26,12 @@ namespace Stranne.BooliLib.Tests
         {
             const string absoluteUrl = "https://api.booli.se/listings?q=nacka";
             var sut = SetUpTest(absoluteUrl, JsonFile.ListingsMultiple);
-            var listedSearchOption = new ListedSearchOption
+            var searchOption = new ListedSearchOption
             {
                 Query = "nacka"
             };
             
-            var actual = sut.GetListed(listedSearchOption);
+            var actual = sut.GetListed(searchOption);
 
             VerifyRequest();
             Assert.NotNull(actual);
@@ -51,6 +51,24 @@ namespace Stranne.BooliLib.Tests
             VerifyRequest();
             Assert.NotNull(actual);
             Assert.Equal(booliId, actual.BooliId);
+        }
+
+        [Fact]
+        public void GetSoldList()
+        {
+            const string absoluteUrl = "https://api.booli.se/sold?q=nacka";
+            var sut = SetUpTest(absoluteUrl, JsonFile.SoldMultiple);
+            var searchOption = new SoldSearchOption
+            {
+                Query = "nacka"
+            };
+
+            var actual = sut.GetSold(searchOption);
+
+            VerifyRequest();
+            Assert.NotNull(actual);
+            Assert.Equal(5, actual.Result.Count());
+            Assert.Equal(2330048, actual.Result.First().BooliId);
         }
     }
 }

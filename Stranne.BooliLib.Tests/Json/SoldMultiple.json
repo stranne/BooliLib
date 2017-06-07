@@ -1,0 +1,242 @@
+﻿{
+  "totalCount": 5777,
+  "count": 5,
+  "sold":
+  [
+    {
+      "location":
+      {
+        "address":
+        {
+          "streetAddress": "Solhöjdsvägen 20"
+        },
+        "position":
+        {
+          "latitude": 59.31640539,
+          "longitude": 18.23623381
+        },
+        "namedAreas":
+        [
+          "Saltsjö-Boo"
+        ],
+        "region":
+        {
+          "municipalityName": "Nacka",
+          "countyName": "Stockholms län"
+        },
+        "distance":
+        {
+          "ocean": 663
+        }
+      },
+      "listPrice": 6750000,
+      "livingArea": 130,
+      "additionalArea": 30,
+      "plotArea": 1454,
+      "source":
+      {
+        "name": "Svensk Fastighetsförmedling",
+        "id": 713,
+        "type": "Broker",
+        "url": "http://www.svenskfast.se/"
+      },
+      "rooms": 4,
+      "published": "2017-05-17 18:41:32",
+      "constructionYear": 1918,
+      "objectType": "Villa",
+      "booliId": 2330048,
+      "soldDate": "2017-06-07",
+      "soldPrice": 7560000,
+      "url": "https://www.booli.se/annons/2330048"
+    },
+    {
+      "location":
+      {
+        "address":
+        {
+          "streetAddress": "Diligensvägen 34B"
+        },
+        "position":
+        {
+          "latitude": 59.31561917,
+          "longitude": 18.17181587
+        },
+        "namedAreas":
+        [
+          "Jarlaberg"
+        ],
+        "region":
+        {
+          "municipalityName": "Nacka",
+          "countyName": "Stockholms län"
+        },
+        "distance":
+        {
+          "ocean": 608
+        }
+      },
+      "listPrice": 2975000,
+      "rent": 4172,
+      "floor": 0,
+      "livingArea": 67,
+      "additionalArea": 0,
+      "source":
+      {
+        "name": "Erik Olsson Fastighetsförmedling",
+        "id": 1564,
+        "type": "Broker",
+        "url": "http://www.erikolsson.se/"
+      },
+      "rooms": 2,
+      "published": "2017-04-27 13:12:07",
+      "constructionYear": 1988,
+      "objectType": "Lägenhet",
+      "booliId": 2310374,
+      "soldDate": "2017-06-07",
+      "soldPrice": 2935000,
+      "url": "https://www.booli.se/annons/2310374"
+    },
+    {
+      "location":
+      {
+        "address":
+        {
+          "streetAddress": "Serenadvägen 13B"
+        },
+        "position":
+        {
+          "latitude": 59.31083705,
+          "longitude": 18.16596826
+        },
+        "namedAreas":
+        [
+          "Nacka Forum"
+        ],
+        "region":
+        {
+          "municipalityName": "Nacka",
+          "countyName": "Stockholms län"
+        },
+        "distance":
+        {
+          "ocean": 890
+        }
+      },
+      "listPrice": 2895000,
+      "rent": 4180,
+      "floor": 3,
+      "livingArea": 69,
+      "source":
+      {
+        "name": "SkandiaMäklarna",
+        "id": 1570,
+        "type": "Broker",
+        "url": "http://www.skandiamaklarna.se/"
+      },
+      "rooms": 2,
+      "published": "2017-05-18 23:33:24",
+      "constructionYear": 2009,
+      "objectType": "Lägenhet",
+      "booliId": 2331687,
+      "soldDate": "2017-06-06",
+      "soldPrice": 3255000,
+      "url": "https://www.booli.se/annons/2331687"
+    },
+    {
+      "location":
+      {
+        "address":
+        {
+          "streetAddress": "Finnboda Varvsväg 14B"
+        },
+        "position":
+        {
+          "latitude": 59.31560938,
+          "longitude": 18.12424451
+        },
+        "namedAreas":
+        [
+          "Finnboda Hamn"
+        ],
+        "region":
+        {
+          "municipalityName": "Nacka",
+          "countyName": "Stockholms län"
+        },
+        "distance":
+        {
+          "ocean": 85
+        }
+      },
+      "listPrice": 9800000,
+      "rent": 5544,
+      "floor": 4,
+      "livingArea": 103,
+      "source":
+      {
+        "name": "Eklund Stockholm New York",
+        "id": 1314,
+        "type": "Broker",
+        "url": "http://www.esny.se/"
+      },
+      "rooms": 4,
+      "published": "2017-04-28 03:49:56",
+      "constructionYear": 2014,
+      "objectType": "Lägenhet",
+      "booliId": 2311155,
+      "soldDate": "2017-06-06",
+      "soldPrice": 9400000,
+      "apartmentNumber": "1401",
+      "url": "https://www.booli.se/annons/2311155"
+    },
+    {
+      "location":
+      {
+        "address":
+        {
+          "streetAddress": "Lokevägen 29A",
+          "city": "Boo"
+        },
+        "position":
+        {
+          "latitude": 59.31976905,
+          "longitude": 18.27640034
+        },
+        "namedAreas":
+        [
+          "Saltsjö-Boo"
+        ],
+        "region":
+        {
+          "municipalityName": "Nacka",
+          "countyName": "Stockholms län"
+        },
+        "distance":
+        {
+          "ocean": 1601
+        }
+      },
+      "listPrice": 4500000,
+      "plotArea": 801,
+      "source":
+      {
+        "name": "SkandiaMäklarna",
+        "id": 1570,
+        "type": "Broker",
+        "url": "http://www.skandiamaklarna.se/"
+      },
+      "published": "2017-05-10 21:41:38",
+      "objectType": "Tomt/Mark",
+      "booliId": 2321667,
+      "soldDate": "2017-06-06",
+      "soldPrice": 4500000,
+      "url": "https://www.booli.se/annons/2321667"
+    }
+  ],
+  "limit": 5,
+  "offset": 0,
+  "searchParams":
+  {
+    "areaId": 76
+  }
+}

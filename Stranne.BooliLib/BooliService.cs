@@ -44,6 +44,16 @@ namespace Stranne.BooliLib
             return GetSoldAsync(booliId).GetAwaiter().GetResult();
         }
 
+        public async Task<BooliResult<SoldObject, SoldSearchOption>> GetSoldAsync(SoldSearchOption searchOption)
+        {
+            return await BaseService.GetAsync<SoldObject, SoldSearchOption>("sold", searchOption);
+        }
+
+        public BooliResult<SoldObject, SoldSearchOption> GetSold(SoldSearchOption searchOption)
+        {
+            return GetSoldAsync(searchOption).GetAwaiter().GetResult();
+        }
+
         /// <inheritdoc />
         public void Dispose()
         {

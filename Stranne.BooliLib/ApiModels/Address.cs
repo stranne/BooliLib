@@ -9,5 +9,10 @@ namespace Stranne.BooliLib.ApiModels
         /// Street address
         /// </summary>
         public string StreetAddress { get; set; }
+
+        /// <summary>
+        /// City
+        /// </summary>
+        public string City { get; set; }
     }
 }

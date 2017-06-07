@@ -26,11 +26,13 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[0].Location.NamedAreas", 1 },
             { "Sold[0].Location.NamedAreas[0]", "Hässelby Strand" },
             { "Sold[0].Location.Address.StreetAddress", "Aprikosgatan 29" },
+            { "Sold[0].Location.Address.City", null },
             { "Sold[0].Location.Region.MunicipalityName", "Stockholm" },
             { "Sold[0].Location.Region.CountyName", "Stockholms län" },
             { "Sold[0].Location.Position.Latitude", 59.3599487d },
             { "Sold[0].Location.Position.Longitude", 17.8377649 },
             { "Sold[0].Location.Position.IsApproximate", true },
+            { "Sold[0].Location.Distance.Ocean", null },
 
             { "Sold[0].ObjectType", "Lägenhet" },
             { "Sold[0].Rooms", 3f },
@@ -39,6 +41,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[0].PlotArea", null },
             { "Sold[0].Rent", 4213f },
             { "Sold[0].Floor", 6f },
+            { "Sold[0].ApartmentNumber", null },
             { "Sold[0].ConstructionYear", 1957 },
             { "Sold[0].Url", "https://www.booli.se/annons/181051" }
         };

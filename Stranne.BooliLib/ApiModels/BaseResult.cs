@@ -66,6 +66,11 @@ namespace Stranne.BooliLib.ApiModels
         public float? Floor { get; set; }
 
         /// <summary>
+        /// Apartment number
+        /// </summary>
+        public string ApartmentNumber { get; set; }
+
+        /// <summary>
         /// Plot area
         /// </summary>
         public int? PlotArea { get; set; } // TODO test (check also on sold) (double check type)

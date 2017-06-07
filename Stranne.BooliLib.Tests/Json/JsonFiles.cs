@@ -4,6 +4,7 @@
     {
         ListingsSingle,
         ListingsMultiple,
-        SoldSingle
+        SoldSingle,
+        SoldMultiple
     }
 }
