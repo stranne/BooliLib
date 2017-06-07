@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Stranne.BooliLib.ApiModels
 {
     /// <summary>
@@ -32,6 +34,12 @@ namespace Stranne.BooliLib.ApiModels
         {
             Latitude = latitude;
             Longitude = longitude;
+        }
+
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $"{Latitude.ToString(new CultureInfo("en-US"))},{Longitude.ToString(new CultureInfo("en-US"))}";
         }
     }
 }

@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Stranne.BooliLib.ApiModels
 {
     /// <summary>
@@ -31,6 +33,12 @@ namespace Stranne.BooliLib.ApiModels
         {
             Height = height;
             Width = width;
+        }
+
+        /// <inheritdoc />
+        public override string ToString()
+        {
+            return $"{Height.ToString(new CultureInfo("en-US"))},{Width.ToString(new CultureInfo("en-US"))}";
         }
     }
 }

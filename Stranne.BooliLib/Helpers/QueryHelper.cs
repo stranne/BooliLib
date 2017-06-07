@@ -19,9 +19,9 @@ namespace Stranne.BooliLib.Helpers
             {
                 throw new ArgumentException($"Make sure to always specify a value for at least one of the following properties; {string.Join(", ", properties.Where(prop => prop.GetCustomAttribute<BooliBaseSearchOptionAttribute>() != null).Select(prop => prop.Name))}");
             }
-            
-            var dictionary = new Dictionary<string, string>();
 
+            var dictionary = new Dictionary<string, string>();
+            
             foreach (var property in properties)
             {
                 var propertyValue = GetValue(property, searchOptions);
@@ -38,13 +38,13 @@ namespace Stranne.BooliLib.Helpers
 
                     if (GetValue(dependentProperty, searchOptions).IsNull())
                     {
-                        throw new ArgumentException($"'{GetName(dependentProperty)}' can't be null since it is dependent by '{GetName(property)}'");
+                        throw new ArgumentException($"'{dependentProperty.Name}' can't be null since it is dependent by '{property.Name}'");
                     }
                 }
 
                 if (propertyValue.GetType() == typeof(string[]))
                 {
-                    propertyValue = string.Join(",", (string[]) propertyValue);
+                    propertyValue = string.Join(",", (string[])propertyValue);
                 }
 
                 var propertyName = GetName(property);

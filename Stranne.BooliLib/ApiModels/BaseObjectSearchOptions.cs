@@ -1,5 +1,6 @@
 using System;
 using Newtonsoft.Json;
+using Stranne.BooliLib.Attributes;
 using Stranne.BooliLib.Converters;
 
 namespace Stranne.BooliLib.ApiModels
@@ -18,6 +19,7 @@ namespace Stranne.BooliLib.ApiModels
         /// Dimension
         /// </summary>
         [JsonProperty("dim")]
+        [SerializeDependency(nameof(Center))]
         public Dimension Dimension { get; set; }
 
         /// <summary>
