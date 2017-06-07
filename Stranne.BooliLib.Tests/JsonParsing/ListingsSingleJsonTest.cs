@@ -28,6 +28,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[0].Location.Region.CountyName", "Stockholms län" },
             { "Listings[0].Location.Position.Latitude", 59.34733169d },
             { "Listings[0].Location.Position.Longitude", 18.05882873d },
+            { "Listings[0].Location.Position.IsApproximate", null },
 
             { "Listings[0].ObjectType", "Lägenhet" },
             { "Listings[0].Rooms", 2f },

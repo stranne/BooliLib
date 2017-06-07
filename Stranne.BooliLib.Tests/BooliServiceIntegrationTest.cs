@@ -38,5 +38,19 @@ namespace Stranne.BooliLib.Tests
             Assert.Equal(5, actual.Result.Count());
             Assert.Equal(2347066, actual.Result.First().BooliId);
         }
+
+        [Fact]
+        public void GetSold()
+        {
+            const int booliId = 181051;
+            const string absoluteUrl = "https://api.booli.se/sold/181051";
+            var sut = SetUpTest(absoluteUrl, JsonFile.SoldSingle);
+
+            var actual = sut.GetSold(booliId);
+
+            VerifyRequest();
+            Assert.NotNull(actual);
+            Assert.Equal(booliId, actual.BooliId);
+        }
     }
 }

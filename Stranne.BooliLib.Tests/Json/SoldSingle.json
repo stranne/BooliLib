@@ -1,0 +1,48 @@
+﻿{
+  "sold":
+  [
+    {
+      "location":
+      {
+        "address":
+        {
+          "streetAddress": "Aprikosgatan 29"
+        },
+        "position":
+        {
+          "latitude": 59.3599487,
+          "longitude": 17.8377649,
+          "isApproximate": true
+        },
+        "namedAreas":
+        [
+          "Hässelby Strand"
+        ],
+        "region":
+        {
+          "municipalityName": "Stockholm",
+          "countyName": "Stockholms län"
+        }
+      },
+      "listPrice": 1695000,
+      "rent": 4213,
+      "floor": 6,
+      "livingArea": 73,
+      "source":
+      {
+        "name": "Svensk Fastighetsförmedling",
+        "id": 713,
+        "type": "Broker",
+        "url": "http://www.svenskfast.se/"
+      },
+      "rooms": 3,
+      "published": "2012-06-14 15:30:55",
+      "constructionYear": 1957,
+      "objectType": "Lägenhet",
+      "booliId": 181051,
+      "soldDate": "2012-11-06",
+      "soldPrice": 1680000,
+      "url": "https://www.booli.se/annons/181051"
+    }
+  ]
+}

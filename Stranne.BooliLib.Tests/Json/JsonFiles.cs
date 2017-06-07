@@ -3,6 +3,7 @@
     public enum JsonFile
     {
         ListingsSingle,
-        ListingsMultiple
+        ListingsMultiple,
+        SoldSingle
     }
 }

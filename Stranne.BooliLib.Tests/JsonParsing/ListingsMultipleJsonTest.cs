@@ -29,6 +29,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[0].Location.Region.CountyName", "Stockholms län" },
             { "Listings[0].Location.Position.Latitude", 59.27452078d },
             { "Listings[0].Location.Position.Longitude", 18.30574393d },
+            { "Listings[0].Location.Position.IsApproximate", null },
 
             { "Listings[0].ObjectType", "Lägenhet" },
             { "Listings[0].Rooms", 1f },
@@ -59,6 +60,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[1].Location.Region.CountyName", "Stockholms län" },
             { "Listings[1].Location.Position.Latitude", 59.28495073d },
             { "Listings[1].Location.Position.Longitude", 18.26883674d },
+            { "Listings[1].Location.Position.IsApproximate", null },
 
             { "Listings[1].ObjectType", "Lägenhet" },
             { "Listings[1].Rooms", 2f },
@@ -89,6 +91,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[2].Location.Region.CountyName", "Stockholms län" },
             { "Listings[2].Location.Position.Latitude", 59.30770373d },
             { "Listings[2].Location.Position.Longitude", 18.13700112d },
+            { "Listings[2].Location.Position.IsApproximate", null },
 
             { "Listings[2].ObjectType", "Lägenhet" },
             { "Listings[2].Rooms", 2f },
@@ -119,6 +122,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[3].Location.Region.CountyName", "Stockholms län" },
             { "Listings[3].Location.Position.Latitude", 59.30379927d },
             { "Listings[3].Location.Position.Longitude", 18.24811838d },
+            { "Listings[3].Location.Position.IsApproximate", null },
 
             { "Listings[3].ObjectType", "Villa" },
             { "Listings[3].Rooms", 8f },
@@ -149,6 +153,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[4].Location.Region.CountyName", "Stockholms län" },
             { "Listings[4].Location.Position.Latitude", 59.31305129d },
             { "Listings[4].Location.Position.Longitude", 18.12274218d },
+            { "Listings[4].Location.Position.IsApproximate", null },
 
             { "Listings[4].ObjectType", "Lägenhet" },
             { "Listings[4].Rooms", 4f },
