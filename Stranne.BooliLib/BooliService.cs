@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Stranne.BooliLib.ApiModels;
+using Stranne.BooliLib.Helpers;
 using Stranne.BooliLib.Services;
 
 namespace Stranne.BooliLib
@@ -62,6 +63,22 @@ namespace Stranne.BooliLib
         public BooliResult<Area, AreaSearchOption> GetArea(AreaSearchOption searchOption)
         {
             return GetAreaAsync(searchOption).GetAwaiter().GetResult();
+        }
+
+        public string GetThumbnailUrl(int booliId)
+        {
+            return ThumbnailUrlHelper.GetThumbnailUrl(booliId);
+        }
+
+        public string GetThumbnailUrl(int booliId, float size)
+        {
+            return ThumbnailUrlHelper.GetThumbnailUrl(booliId, size: size);
+        }
+
+
+        public string GetThumbnailUrl(int booliId, int width, int height)
+        {
+            return ThumbnailUrlHelper.GetThumbnailUrl(booliId, width, height);
         }
 
         /// <inheritdoc />

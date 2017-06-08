@@ -25,5 +25,11 @@ namespace Stranne.BooliLib
         Task<BooliResult<Area, AreaSearchOption>> GetAreaAsync(AreaSearchOption searchOption);
 
         BooliResult<Area, AreaSearchOption> GetArea(AreaSearchOption searchOption);
+
+        string GetThumbnailUrl(int booliId);
+
+        string GetThumbnailUrl(int booliId, float size);
+
+        string GetThumbnailUrl(int booliId, int width, int height);
     }
 }
