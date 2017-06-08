@@ -1,6 +1,6 @@
 using System;
 
-namespace Stranne.BooliLib.ApiModels
+namespace Stranne.BooliLib.Models
 {
     /// <summary>
     /// Sold search option

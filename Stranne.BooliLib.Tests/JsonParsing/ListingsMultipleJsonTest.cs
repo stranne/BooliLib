@@ -1,5 +1,4 @@
 ﻿using System;
-using Stranne.BooliLib.ApiModels;
 using Stranne.BooliLib.Tests.Json;
 using Stranne.BooliLib.Tests.Models;
 using Xunit;

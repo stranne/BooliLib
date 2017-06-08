@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Stranne.BooliLib.ApiModels;
 using Stranne.BooliLib.Helpers;
+using Stranne.BooliLib.Models;
 using Xunit;
 
 namespace Stranne.BooliLib.Tests.Helpers

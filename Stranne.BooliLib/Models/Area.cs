@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Stranne.BooliLib.ApiModels
+namespace Stranne.BooliLib.Models
 {
     /// <summary>
     /// Area

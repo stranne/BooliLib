@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using Stranne.BooliLib.Attributes;
 using Stranne.BooliLib.Converters;
 
-namespace Stranne.BooliLib.ApiModels
+namespace Stranne.BooliLib.Models
 {
     /// <summary>
     /// Base object search options

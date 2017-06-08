@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Stranne.BooliLib.ApiModels;
+using Stranne.BooliLib.Models;
 using Stranne.BooliLib.Services;
 using Stranne.BooliLib.Tests.Helpers;
 using Stranne.BooliLib.Tests.Json;

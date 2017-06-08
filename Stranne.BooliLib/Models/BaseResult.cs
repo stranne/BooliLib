@@ -1,8 +1,6 @@
 using System;
-using Newtonsoft.Json;
-using Stranne.BooliLib.Converters;
 
-namespace Stranne.BooliLib.ApiModels
+namespace Stranne.BooliLib.Models
 {
     /// <summary>
     /// Base result

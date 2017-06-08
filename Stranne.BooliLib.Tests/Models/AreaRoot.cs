@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Stranne.BooliLib.ApiModels;
+using Stranne.BooliLib.Models;
 
 namespace Stranne.BooliLib.Tests.Models
 {

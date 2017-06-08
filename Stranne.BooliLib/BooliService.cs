@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Stranne.BooliLib.ApiModels;
 using Stranne.BooliLib.Helpers;
+using Stranne.BooliLib.Models;
 using Stranne.BooliLib.Services;
 
 namespace Stranne.BooliLib

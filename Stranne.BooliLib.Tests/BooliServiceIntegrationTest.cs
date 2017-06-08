@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using Stranne.BooliLib.ApiModels;
+using Stranne.BooliLib.Models;
 using Stranne.BooliLib.Tests.Json;
 using Xunit;
 

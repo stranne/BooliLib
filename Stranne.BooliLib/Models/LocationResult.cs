@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Stranne.BooliLib.ApiModels
+namespace Stranne.BooliLib.Models
 {
     /// <summary>
     /// Location result

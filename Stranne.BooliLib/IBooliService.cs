@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Threading.Tasks;
-using Stranne.BooliLib.ApiModels;
+using Stranne.BooliLib.Models;
 
 namespace Stranne.BooliLib
 {

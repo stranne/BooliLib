@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace Stranne.BooliLib.ApiModels
+namespace Stranne.BooliLib.Models
 {
     /// <summary>
     /// Position

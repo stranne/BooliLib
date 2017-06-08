@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
-using Stranne.BooliLib.ApiModels;
 using Stranne.BooliLib.Converters;
 using Stranne.BooliLib.Helpers;
+using Stranne.BooliLib.Models;
 
 namespace Stranne.BooliLib.Services
 {

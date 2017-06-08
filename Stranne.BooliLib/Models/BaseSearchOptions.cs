@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using Stranne.BooliLib.Attributes;
 
-namespace Stranne.BooliLib.ApiModels
+namespace Stranne.BooliLib.Models
 {
     /// <summary>
     /// Base search options
