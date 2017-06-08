@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using Stranne.BooliLib.ApiModels;
+using Stranne.BooliLib.Converters;
 using Stranne.BooliLib.Helpers;
 
 namespace Stranne.BooliLib.Services
@@ -19,6 +20,10 @@ namespace Stranne.BooliLib.Services
 
         internal readonly JsonSerializerSettings JsonSerializerSettings = new JsonSerializerSettings
         {
+            Converters = new JsonConverter[]
+            {
+                new DateTimeOffsetJsonConverter()
+            },
             ContractResolver = new CamelCasePropertyNamesContractResolver()
         };
 

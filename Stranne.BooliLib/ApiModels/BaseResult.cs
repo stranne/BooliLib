@@ -22,7 +22,6 @@ namespace Stranne.BooliLib.ApiModels
         /// <summary>
         /// Published date
         /// </summary>
-        [JsonConverter(typeof(DateTimeOffsetJsonConverter))]
         public DateTimeOffset Published { get; set; }
 
         /// <summary>
