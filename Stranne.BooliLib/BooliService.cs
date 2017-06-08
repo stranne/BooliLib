@@ -54,6 +54,16 @@ namespace Stranne.BooliLib
             return GetSoldAsync(searchOption).GetAwaiter().GetResult();
         }
 
+        public async Task<BooliResult<Area, AreaSearchOption>> GetAreaAsync(AreaSearchOption searchOption)
+        {
+            return await BaseService.GetAsync<Area, AreaSearchOption>("areas", searchOption);
+        }
+
+        public BooliResult<Area, AreaSearchOption> GetArea(AreaSearchOption searchOption)
+        {
+            return GetAreaAsync(searchOption).GetAwaiter().GetResult();
+        }
+
         /// <inheritdoc />
         public void Dispose()
         {

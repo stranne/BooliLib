@@ -1,0 +1,84 @@
+﻿{
+  "totalCount": 5,
+  "count": 5,
+  "areas": [
+    {
+      "booliId": 76,
+      "name": "Nacka",
+      "types":
+      [
+        "Kommun"
+      ],
+      "parentBooliId": 2,
+      "parentName": "Stockholms län",
+      "parentTypes":
+      [
+        "Län"
+      ],
+      "fullName": "Nacka, Stockholms län",
+      "urlFriendlyName": "nacka"
+    },
+    {
+      "booliId": 930508,
+      "name": "Nacka Strand",
+      "types": [
+        "undefined"
+      ],
+      "parentBooliId": 76,
+      "parentName": "Nacka",
+      "parentTypes": [
+        "Kommun"
+      ],
+      "fullName": "Nacka Strand, Nacka",
+      "urlFriendlyName": "nacka+strand"
+    },
+    {
+      "booliId": 24617,
+      "name": "Nacka Forum",
+      "types": [
+        "undefined"
+      ],
+      "parentBooliId": 76,
+      "parentName": "Nacka",
+      "parentTypes": [
+        "Kommun"
+      ],
+      "fullName": "Nacka Forum, Nacka",
+      "urlFriendlyName": "nacka+forum"
+    },
+    {
+      "booliId": 106799,
+      "name": "Nackagatan",
+      "types": [
+        "Street"
+      ],
+      "parentBooliId": 1,
+      "parentName": "Stockholm",
+      "parentTypes": [
+        "Kommun"
+      ],
+      "fullName": "Nackagatan, Stockholm",
+      "urlFriendlyName": "nackagatan"
+    },
+    {
+      "booliId": 432369,
+      "name": "Nackanäsvägen",
+      "types": [
+        "Street"
+      ],
+      "parentBooliId": 76,
+      "parentName": "Nacka",
+      "parentTypes": [
+        "Kommun"
+      ],
+      "fullName": "Nackanäsvägen, Nacka",
+      "urlFriendlyName": "nackanasvagen"
+    }
+  ],
+  "searchParams": {
+    "q": "nacka",
+    "listings": 1,
+    "transactions": 0
+  },
+  "limit": 5
+}

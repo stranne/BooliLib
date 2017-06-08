@@ -54,6 +54,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Json\Area.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Json\ListingsMultiple.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

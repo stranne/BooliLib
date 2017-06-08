@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections;
+using System.Threading.Tasks;
 using Stranne.BooliLib.ApiModels;
 
 namespace Stranne.BooliLib
@@ -20,5 +21,9 @@ namespace Stranne.BooliLib
         Task<BooliResult<SoldObject, SoldSearchOption>> GetSoldAsync(SoldSearchOption searchOption);
 
         BooliResult<SoldObject, SoldSearchOption> GetSold(SoldSearchOption searchOption);
+
+        Task<BooliResult<Area, AreaSearchOption>> GetAreaAsync(AreaSearchOption searchOption);
+
+        BooliResult<Area, AreaSearchOption> GetArea(AreaSearchOption searchOption);
     }
 }

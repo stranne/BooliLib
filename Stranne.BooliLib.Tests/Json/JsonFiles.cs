@@ -2,6 +2,7 @@
 {
     public enum JsonFile
     {
+        Area,
         ListingsSingle,
         ListingsMultiple,
         SoldSingle,

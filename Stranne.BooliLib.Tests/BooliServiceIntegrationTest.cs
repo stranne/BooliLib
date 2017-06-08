@@ -70,5 +70,23 @@ namespace Stranne.BooliLib.Tests
             Assert.Equal(5, actual.Result.Count());
             Assert.Equal(2330048, actual.Result.First().BooliId);
         }
+
+        [Fact]
+        public void GetArea()
+        {
+            const string absoluteUrl = "https://api.booli.se/areas?q=nacka";
+            var sut = SetUpTest(absoluteUrl, JsonFile.Area);
+            var searchOption = new AreaSearchOption
+            {
+                Query = "nacka"
+            };
+
+            var actual = sut.GetArea(searchOption);
+
+            VerifyRequest();
+            Assert.NotNull(actual);
+            Assert.Equal(5, actual.Result.Count());
+            Assert.Equal(76, actual.Result.First().BooliId);
+        }
     }
 }
