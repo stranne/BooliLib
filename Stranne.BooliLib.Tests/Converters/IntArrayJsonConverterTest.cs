@@ -6,7 +6,7 @@ using Xunit;
 namespace Stranne.BooliLib.Tests.Converters
 {
     [Trait("Area", "Converters")]
-    public class ArrayIntJsonConverterTest
+    public class IntArrayJsonConverterTest
     {
         public static TheoryData WriteJsonMemberData => new TheoryData<IntArraySerializable, string>
         {
@@ -18,7 +18,7 @@ namespace Stranne.BooliLib.Tests.Converters
         [MemberData(nameof(WriteJsonMemberData))]
         public void WriteJson(IntArraySerializable value, string expected)
         {
-            var actual = JsonConvert.SerializeObject(value.GetValue(), new ArrayIntJsonConverter()).Trim('"');
+            var actual = JsonConvert.SerializeObject(value.GetValue(), new IntArrayJsonConverter());
 
             Assert.Equal(expected, actual);
         }
@@ -32,7 +32,7 @@ namespace Stranne.BooliLib.Tests.Converters
         [MemberData(nameof(ReadJsonData))]
         public void ReadJson(string value, int[] expected)
         {
-            var actual = JsonConvert.DeserializeObject<int[]>(value, new ArrayIntJsonConverter());
+            var actual = JsonConvert.DeserializeObject<int[]>(value, new IntArrayJsonConverter());
 
             Assert.Equal(expected, actual);
         }

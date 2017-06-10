@@ -4,6 +4,7 @@ using Xunit;
 
 namespace Stranne.BooliLib.Tests.Helpers
 {
+    [Trait("Area", "Helpers")]
     public class ThumbnailUrlHelperTest
     {
         [Theory]

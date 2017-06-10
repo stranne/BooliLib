@@ -10,6 +10,7 @@ using Xunit;
 
 namespace Stranne.BooliLib.Tests.Services
 {
+    [Trait("Area", "Services")]
     public class BaseServiceTest
     {
 

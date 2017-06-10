@@ -16,7 +16,9 @@ namespace Stranne.BooliLib.Models
         public Position Center { get; set; }
 
         /// <summary>
-        /// Dimension
+        /// Dimension 
+        /// This property requires Center to be provided
+        /// or an argument exception will be thrown.
         /// </summary>
         [JsonProperty("dim")]
         [SerializeDependency(nameof(Center))]
@@ -25,12 +27,13 @@ namespace Stranne.BooliLib.Models
         /// <summary>
         /// Box
         /// </summary>
-        public BoxCoordinates Bbox { get; set; }
+        [JsonProperty("Bbox")]
+        public BoxCoordinates BoxCoordinates { get; set; }
 
         /// <summary>
         /// Area id
         /// </summary>
-        [JsonConverter(typeof(ArrayIntJsonConverter))]
+        [JsonConverter(typeof(IntArrayJsonConverter))]
         public int[] AreaId { get; set; }
 
         /// <summary>
@@ -106,11 +109,13 @@ namespace Stranne.BooliLib.Models
         /// <summary>
         /// Minimum published date
         /// </summary>
+        [JsonConverter(typeof(DateTimeOffsetJsonConverter))]
         public DateTimeOffset? MinPublished { get; set; }
 
         /// <summary>
         /// Maximum published date
         /// </summary>
+        [JsonConverter(typeof(DateTimeOffsetJsonConverter))]
         public DateTimeOffset? MaxPublished { get; set; }
 
         /// <summary>

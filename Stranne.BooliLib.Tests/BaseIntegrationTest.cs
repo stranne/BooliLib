@@ -14,7 +14,7 @@ namespace Stranne.BooliLib.Tests
 
         private MockHttpMessageHandler _httpMessageHandlerMock;
 
-        public BooliService SetUpTest(string absoluteUrl, JsonFile jsonFile)
+        protected BooliService SetUpTest(string absoluteUrl, JsonFile jsonFile)
         {
             _absoluteUrl = absoluteUrl;
 
@@ -27,7 +27,7 @@ namespace Stranne.BooliLib.Tests
             return sut;
         }
 
-        public void VerifyRequest()
+        protected void VerifyRequest()
         {
             _httpMessageHandlerMock.VerifyRequest(_absoluteUrl, HttpMethod.Get);
         }

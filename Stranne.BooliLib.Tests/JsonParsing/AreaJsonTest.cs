@@ -4,6 +4,7 @@ using Xunit;
 
 namespace Stranne.BooliLib.Tests.JsonParsing
 {
+    [Trait("Area", "Json")]
     public class AreaJsonTest : BaseJsonTest
     {
         protected override JsonFile JsonFile => JsonFile.Area;

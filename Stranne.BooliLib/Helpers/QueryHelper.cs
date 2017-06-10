@@ -5,6 +5,7 @@ using System.Reflection;
 using Newtonsoft.Json;
 using Stranne.BooliLib.Attributes;
 using Stranne.BooliLib.Extension;
+using Stranne.BooliLib.Services;
 
 namespace Stranne.BooliLib.Helpers
 {
@@ -42,11 +43,6 @@ namespace Stranne.BooliLib.Helpers
                     }
                 }
 
-                if (propertyValue.GetType() == typeof(string[]))
-                {
-                    propertyValue = string.Join(",", (string[])propertyValue);
-                }
-
                 var propertyName = GetName(property);
 
                 dictionary.Add(propertyName, Convert.ToString(propertyValue));
@@ -57,18 +53,17 @@ namespace Stranne.BooliLib.Helpers
 
         private static object GetValue<TSearchOptions>(PropertyInfo property, TSearchOptions searchOptions)
         {
-            var jsonConverter = property.GetCustomAttribute<JsonConverterAttribute>();
-            if (jsonConverter == null)
+            var value = property.GetValue(searchOptions);
+            if (value == null)
             {
-                return property.GetValue(searchOptions);
+                return null;
             }
 
-            var settings = new JsonSerializerSettings();
-            settings.Converters.Add(Activator.CreateInstance(jsonConverter.ConverterType) as JsonConverter);
-            return JsonConvert.SerializeObject(property.GetValue(searchOptions), settings).Trim('"');
+            var settings = new BaseService(null, null).JsonSerializerSettings;
+            return JsonConvert.SerializeObject(value, settings).Trim('"');
         }
 
-        private static string GetName(PropertyInfo property)
+        private static string GetName(MemberInfo property)
         {
             var jsonProperyt = property.GetCustomAttribute<JsonPropertyAttribute>();
             return !string.IsNullOrWhiteSpace(jsonProperyt?.PropertyName)

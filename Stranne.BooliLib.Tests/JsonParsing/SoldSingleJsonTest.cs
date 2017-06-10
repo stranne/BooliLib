@@ -5,6 +5,7 @@ using Xunit;
 
 namespace Stranne.BooliLib.Tests.JsonParsing
 {
+    [Trait("Area", "Json")]
     public class SoldSingleJsonTest : BaseJsonTest
     {
         protected override JsonFile JsonFile => JsonFile.SoldSingle;

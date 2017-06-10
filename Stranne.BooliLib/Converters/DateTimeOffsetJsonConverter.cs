@@ -22,7 +22,8 @@ namespace Stranne.BooliLib.Converters
 
         public override bool CanConvert(Type objectType)
         {
-            return objectType == typeof(DateTimeOffset);
+            return objectType == typeof(DateTimeOffset) ||
+                objectType == typeof(DateTimeOffset?);
         }
     }
 }

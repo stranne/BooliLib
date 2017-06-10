@@ -22,7 +22,13 @@ namespace Stranne.BooliLib.Services
         {
             Converters = new JsonConverter[]
             {
-                new DateTimeOffsetJsonConverter()
+                new DateTimeOffsetJsonConverter(),
+                new BoolJsonConverter(),
+                new StringArrayJsonConverter(),
+                new IntArrayJsonConverter(), 
+                new BoxCoordinatesJsonConverter(),
+                new PositionJsonConverter(),
+                new DimensionJsonConverter()
             },
             ContractResolver = new CamelCasePropertyNamesContractResolver()
         };
@@ -45,6 +51,7 @@ namespace Stranne.BooliLib.Services
         }
 
         public async Task<BooliResult<TResult, TSearchOptions>> GetAsync<TResult, TSearchOptions>(string name, TSearchOptions searchOptions)
+            where TSearchOptions : BaseSearchOptions
             where TResult : IBooliId
         {
             var query = QueryHelper.GetQuery(searchOptions);

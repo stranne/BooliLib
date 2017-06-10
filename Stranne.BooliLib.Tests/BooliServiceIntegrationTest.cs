@@ -5,6 +5,7 @@ using Xunit;
 
 namespace Stranne.BooliLib.Tests
 {
+    [Trait("Area", "Integration")]
     public class BooliServiceIntegrationTest : BaseIntegrationTest
     {
         [Fact]
@@ -87,6 +88,48 @@ namespace Stranne.BooliLib.Tests
             Assert.NotNull(actual);
             Assert.Equal(5, actual.Result.Count());
             Assert.Equal(76, actual.Result.First().BooliId);
+        }
+
+        [Fact]
+        public void GetThumbnailUrl()
+        {
+            const int booliId = 2338291;
+            const string absolute = "https://api.bcdn.se/cache/primary_2338291_140x94.jpg";
+            var sut = new BooliService(TestConstants.CallerId, TestConstants.Key);
+
+            var actual = sut.GetThumbnailUrl(booliId);
+
+            Assert.Equal(absolute, actual);
+        }
+        
+        [Fact]
+        public void GetThumbnailUrlWidthHeight()
+        {
+            const int booliId = 2338291;
+            const string absolute = "https://api.bcdn.se/cache/primary_2338291_140x94.jpg";
+            var sut = new BooliService(TestConstants.CallerId, TestConstants.Key);
+
+            var actual = sut.GetThumbnailUrl(booliId, 140, 94);
+
+            Assert.Equal(absolute, actual);
+        }
+        
+        [Fact]
+        public void GetThumbnailUrlSize()
+        {
+            const int booliId = 2338291;
+            const string absolute = "https://api.bcdn.se/cache/primary_2338291_70x47.jpg";
+            var sut = new BooliService(TestConstants.CallerId, TestConstants.Key);
+
+            var actual = sut.GetThumbnailUrl(booliId, 0.5f);
+
+            Assert.Equal(absolute, actual);
+        }
+
+        [Fact]
+        public void Dispose()
+        {
+            new BooliService(TestConstants.CallerId, TestConstants.Key).Dispose();
         }
     }
 }

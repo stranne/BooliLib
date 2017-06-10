@@ -34,11 +34,5 @@ namespace Stranne.BooliLib.Models
             Height = height;
             Width = width;
         }
-
-        /// <inheritdoc />
-        public override string ToString()
-        {
-            return $"{Height.ToString(new CultureInfo("en-US"))},{Width.ToString(new CultureInfo("en-US"))}";
-        }
     }
 }

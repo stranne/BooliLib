@@ -35,11 +35,5 @@ namespace Stranne.BooliLib.Models
             Latitude = latitude;
             Longitude = longitude;
         }
-
-        /// <inheritdoc />
-        public override string ToString()
-        {
-            return $"{Latitude.ToString(new CultureInfo("en-US"))},{Longitude.ToString(new CultureInfo("en-US"))}";
-        }
     }
 }
