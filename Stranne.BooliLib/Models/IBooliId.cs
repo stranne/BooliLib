@@ -1,12 +1,12 @@
 ﻿namespace Stranne.BooliLib.Models
 {
     /// <summary>
-    /// Booli id
+    /// Booli id.
     /// </summary>
     public interface IBooliId
     {
         /// <summary>
-        /// Booli id
+        /// Gets or sets booli id.
         /// </summary>
         int BooliId { get; set; }
     }

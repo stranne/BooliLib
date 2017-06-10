@@ -3,32 +3,32 @@ using System.Globalization;
 namespace Stranne.BooliLib.Models
 {
     /// <summary>
-    /// Dimension
+    /// Dimension.
     /// </summary>
     public class Dimension
     {
         /// <summary>
-        /// Height
+        /// Gets or sets height.
         /// </summary>
         public int Height { get; set; }
 
         /// <summary>
-        /// Width
+        /// Gets or sets width.
         /// </summary>
         public int Width { get; set; }
 
         /// <summary>
-        /// Create an empty dimension
+        /// Gets or sets create an empty dimension.
         /// </summary>
         public Dimension()
         {
         }
 
         /// <summary>
-        /// Create a predefined dimension
+        /// Create a predefined dimension.
         /// </summary>
-        /// <param name="height">Dimension's height</param>
-        /// <param name="width">Dimension's width</param>
+        /// <param name="height">Dimension's height.</param>
+        /// <param name="width">Dimension's width.</param>
         public Dimension(int height, int width)
         {
             Height = height;

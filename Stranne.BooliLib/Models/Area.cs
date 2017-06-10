@@ -3,7 +3,7 @@
 namespace Stranne.BooliLib.Models
 {
     /// <summary>
-    /// Area
+    /// Area.
     /// </summary>
     public class Area : IBooliId
     {
@@ -11,37 +11,37 @@ namespace Stranne.BooliLib.Models
         public int BooliId { get; set; }
 
         /// <summary>
-        /// Name
+        /// Gets or sets name
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Full name
+        /// Gets or sets full name.
         /// </summary>
         public string FullName { get; set; }
 
         /// <summary>
-        /// Types
+        /// Gets or sets types.
         /// </summary>
         public IEnumerable<string> Types { get; set; }
 
         /// <summary>
-        /// Parent booli id
+        /// Gets or sets parent booli id.
         /// </summary>
         public int ParentBooliId { get; set; }
 
         /// <summary>
-        /// Parent name
+        /// Gets or sets parent name.
         /// </summary>
         public string ParentName { get; set; }
 
         /// <summary>
-        /// Parent types
+        /// Gets or sets parent types.
         /// </summary>
         public IEnumerable<string> ParentTypes { get; set; }
 
         /// <summary>
-        /// Url friendly name
+        /// Gets or sets url friendly name.
         /// </summary>
         public string UrlFriendlyName { get; set; }
     }

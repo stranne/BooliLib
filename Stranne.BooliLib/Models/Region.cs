@@ -1,17 +1,17 @@
 namespace Stranne.BooliLib.Models
 {
     /// <summary>
-    /// Region
+    /// Region.
     /// </summary>
     public class Region
     {
         /// <summary>
-        /// Country name
+        /// Gets or sets country name.
         /// </summary>
         public string CountyName { get; set; }
 
         /// <summary>
-        /// Municipality name
+        /// Gets or sets municipality name.
         /// </summary>
         public string MunicipalityName { get; set; }
     }

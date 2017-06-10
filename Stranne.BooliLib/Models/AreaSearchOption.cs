@@ -3,23 +3,23 @@
 namespace Stranne.BooliLib.Models
 {
     /// <summary>
-    /// Area search option
+    /// Area search option.
     /// </summary>
     public class AreaSearchOption : BaseSearchOptions
     {
         /// <summary>
-        /// Position
+        /// Gets or sets position.
         /// </summary>
         [BooliBaseSearchOption]
         public Position Position { get; set; }
         
         /// <summary>
-        /// Listings
+        /// Gets or sets listings.
         /// </summary>
         public bool? Listings { get; set; }
 
         /// <summary>
-        /// Transactions
+        /// Gets or sets transactions.
         /// </summary>
         public bool? Transactions { get; set; }
 

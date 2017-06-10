@@ -3,17 +3,17 @@
 namespace Stranne.BooliLib.Models
 {
     /// <summary>
-    /// Sold object
+    /// Sold object.
     /// </summary>
     public class SoldObject : BaseResult
     {
         /// <summary>
-        /// Sold date
+        /// Gets or sets sold date.
         /// </summary>
         public DateTimeOffset SoldDate { get; set; }
 
         /// <summary>
-        /// Sold price
+        /// Gets or sets sold price.
         /// </summary>
         public double SoldPrice { get; set; }
     }

@@ -1,12 +1,12 @@
 namespace Stranne.BooliLib.Models
 {
     /// <summary>
-    /// Distance
+    /// Distance.
     /// </summary>
     public class Distance
     {
         /// <summary>
-        /// Ocean
+        /// Gets or sets ocean.
         /// </summary>
         public double? Ocean { get; set; }
     }

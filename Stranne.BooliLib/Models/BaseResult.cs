@@ -3,82 +3,82 @@ using System;
 namespace Stranne.BooliLib.Models
 {
     /// <summary>
-    /// Base result
+    /// Base result.
     /// </summary>
     public abstract class BaseResult : IBooliId
     {
         /// <summary>
-        /// Booli id
+        /// Gets or sets booli id.
         /// </summary>
         public int BooliId { get; set; }
 
         /// <summary>
-        /// List price
+        /// Gets or sets list price.
         /// </summary>
         public double ListPrice { get; set; }
 
         /// <summary>
-        /// Published date
+        /// Gets or sets published date.
         /// </summary>
         public DateTimeOffset Published { get; set; }
 
         /// <summary>
-        /// Location
+        /// Gets or sets location.
         /// </summary>
         public LocationResult Location { get; set; }
 
         /// <summary>
-        /// Object type
+        /// Gets or sets object type.
         /// </summary>
         public string ObjectType { get; set; }
 
         /// <summary>
-        /// Estate agent
+        /// Gets or sets estate agent.
         /// </summary>
         public Source Source { get; set; }
 
         /// <summary>
-        /// Rooms
+        /// Gets or sets rooms.
         /// </summary>
         public float? Rooms { get; set; }
 
         /// <summary>
-        /// Living area
+        /// Gets or sets living area.
         /// </summary>
         public float? LivingArea { get; set; }
 
         /// <summary>
-        /// Additional area
+        /// Gets or sets additional area.
         /// </summary>
         public float? AdditionalArea { get; set; }
 
         /// <summary>
-        /// Rent
+        /// Gets or sets rent.
         /// </summary>
         public float? Rent { get; set; }
 
         /// <summary>
-        /// Floor
+        /// Gets or sets floor.
         /// </summary>
         public float? Floor { get; set; }
 
         /// <summary>
-        /// Apartment number
+        /// Gets or sets apartment number.
         /// </summary>
         public string ApartmentNumber { get; set; }
 
         /// <summary>
-        /// Plot area
+        /// Gets or sets plot area.
         /// </summary>
         public float? PlotArea { get; set; }
 
         /// <summary>
-        /// Construction year
+        /// Gets or sets construction year.
         /// </summary>
         public int? ConstructionYear { get; set; }
 
         /// <summary>
-        /// Is a new construction
+        /// Gets or sets if a new construction.
         /// </summary>
         public bool? IsNewConstruction { get; set; }
 

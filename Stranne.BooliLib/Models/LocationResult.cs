@@ -4,32 +4,32 @@ using System.Runtime.Serialization;
 namespace Stranne.BooliLib.Models
 {
     /// <summary>
-    /// Location result
+    /// Location result.
     /// </summary>
     public class LocationResult
     {
         /// <summary>
-        /// Position
+        /// Gets or sets position.
         /// </summary>
         public PositionResult Position { get; set; }
 
         /// <summary>
-        /// Named areas
+        /// Gets or sets named areas.
         /// </summary>
         public IEnumerable<string> NamedAreas { get; set; }
 
         /// <summary>
-        ///  Address
+        ///  Gets or sets address.
         /// </summary>
         public Address Address { get; set; }
 
         /// <summary>
-        /// Region
+        /// Gets or sets region.
         /// </summary>
         public Region Region { get; set; }
 
         /// <summary>
-        /// Distance
+        /// Gets or sets distance.
         /// </summary>
         public Distance Distance { get; set; }
 

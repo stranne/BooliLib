@@ -1,19 +1,17 @@
-using System.Globalization;
-
 namespace Stranne.BooliLib.Models
 {
     /// <summary>
-    /// Position
+    /// Position.
     /// </summary>
     public class Position
     {
         /// <summary>
-        /// Latitude in WGS84 decimal form
+        /// Gets or sets latitude in WGS84 decimal form.
         /// </summary>
         public double Latitude { get; set; }
 
         /// <summary>
-        /// Longitude in WGS84 decimal form
+        /// Gets or sets longitude in WGS84 decimal form.
         /// </summary>
         public double Longitude { get; set; }
 
@@ -26,8 +24,8 @@ namespace Stranne.BooliLib.Models
         /// <summary>
         /// Create a position with latitude and longitude pre defined.
         /// </summary>
-        /// <param name="latitude">Latitude in WGS84 decimal form</param>
-        /// <param name="longitude">Longitude in WGS84 decimal form</param>
+        /// <param name="latitude">Latitude in WGS84 decimal form.</param>
+        /// <param name="longitude">Longitude in WGS84 decimal form.</param>
         public Position(double latitude, double longitude)
         {
             Latitude = latitude;

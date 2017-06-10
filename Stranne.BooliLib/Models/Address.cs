@@ -1,17 +1,17 @@
 namespace Stranne.BooliLib.Models
 {
     /// <summary>
-    /// Address
+    /// Address.
     /// </summary>
     public class Address
     {
         /// <summary>
-        /// Street address
+        /// Gets or sets street address.
         /// </summary>
         public string StreetAddress { get; set; }
 
         /// <summary>
-        /// City
+        /// Gets or sets city.
         /// </summary>
         public string City { get; set; }
     }
