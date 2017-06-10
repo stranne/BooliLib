@@ -13,7 +13,6 @@ namespace Stranne.BooliLib.Tests.Services
     [Trait("Area", "Services")]
     public class BaseServiceTest
     {
-
         private static BaseService GetBaseService() => new BaseService(TestConstants.CallerId, TestConstants.Key);
 
         [Fact]
@@ -50,7 +49,7 @@ namespace Stranne.BooliLib.Tests.Services
             Assert.Equal(5, actual.Count);
             Assert.Equal(5, actual.Limit);
             Assert.Equal(0, actual.Offset);
-            //Assert.Equal(0, actual.SearchParameters.UpcomingSale); // TODO ?
+            Assert.Equal(new [] { 76 }, actual.SearchParameters.AreaId);
             Assert.Contains(76, actual.SearchParameters.AreaId);
         }
 

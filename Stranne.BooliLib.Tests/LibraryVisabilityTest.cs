@@ -7,6 +7,7 @@ using Xunit;
 
 namespace Stranne.BooliLib.Tests
 {
+    [Trait("Area", "Library")]
     public class LibraryVisabilityTest
     {
         private readonly IEnumerable<Type> _publicClasses = new List<Type>
@@ -51,12 +52,6 @@ namespace Stranne.BooliLib.Tests
                 });
 
             Assert.Empty(publicClasses);
-        }
-
-        [Fact]
-        public void VerifyBooliServiceClassVariables()
-        {
-            Assert.True(new BooliService(TestConstants.CallerId, TestConstants.Key).BaseService.GetType().GetTypeInfo().IsNotPublic);
         }
     }
 }

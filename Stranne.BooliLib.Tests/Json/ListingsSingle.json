@@ -34,6 +34,7 @@
         }
       },
       "objectType": "Lägenhet",
+      "isNewConstruction": 1,
       "rooms": 2,
       "livingArea": 50.5,
       "rent": 2382,

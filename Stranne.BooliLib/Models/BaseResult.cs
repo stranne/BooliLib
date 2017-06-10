@@ -70,7 +70,7 @@ namespace Stranne.BooliLib.Models
         /// <summary>
         /// Plot area
         /// </summary>
-        public int? PlotArea { get; set; } // TODO test (check also on sold) (double check type)
+        public float? PlotArea { get; set; }
 
         /// <summary>
         /// Construction year
@@ -80,7 +80,7 @@ namespace Stranne.BooliLib.Models
         /// <summary>
         /// Is a new construction
         /// </summary>
-        public bool? IsNewConstruction { get; set; } // TODO test (check also on sold)
+        public bool? IsNewConstruction { get; set; }
 
         /// <summary>
         /// Booli url

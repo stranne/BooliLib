@@ -144,24 +144,30 @@
       "booliId": 2346548,
       "listPrice": 5395000,
       "published": "2017-06-05 16:07:45",
-      "source": {
+      "source":
+      {
         "id": 278,
         "name": "Svenska Hem",
         "url": "http://www.sehem.se/",
         "type": "Broker"
       },
-      "location": {
-        "namedAreas": [
+      "location":
+      {
+        "namedAreas":
+        [
           "Finnboda Hamn"
         ],
-        "address": {
+        "address":
+        {
           "streetAddress": "Finnboda Parkväg 6"
         },
-        "region": {
+        "region":
+        {
           "municipalityName": "Nacka",
           "countyName": "Stockholms län"
         },
-        "position": {
+        "position":
+        {
           "longitude": 18.12274218,
           "latitude": 59.31305129
         }

@@ -34,6 +34,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[0].Location.Distance.Ocean", null },
 
             { "Listings[0].ObjectType", "Lägenhet" },
+            { "Listings[0].IsNewConstruction", null },
             { "Listings[0].Rooms", 1f },
             { "Listings[0].LivingArea", 24f },
             { "Listings[0].AdditionalArea", null },
@@ -68,6 +69,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[1].Location.Distance.Ocean", null },
 
             { "Listings[1].ObjectType", "Lägenhet" },
+            { "Listings[1].IsNewConstruction", null },
             { "Listings[1].Rooms", 2f },
             { "Listings[1].LivingArea", 63.5f },
             { "Listings[1].AdditionalArea", null },
@@ -102,6 +104,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[2].Location.Distance.Ocean", null },
 
             { "Listings[2].ObjectType", "Lägenhet" },
+            { "Listings[2].IsNewConstruction", null },
             { "Listings[2].Rooms", 2f },
             { "Listings[2].LivingArea", 58f },
             { "Listings[2].AdditionalArea", null },
@@ -136,10 +139,11 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[3].Location.Distance.Ocean", null },
 
             { "Listings[3].ObjectType", "Villa" },
+            { "Listings[3].IsNewConstruction", null },
             { "Listings[3].Rooms", 8f },
             { "Listings[3].LivingArea", 240f },
             { "Listings[3].AdditionalArea", null },
-            { "Listings[3].PlotArea", 2022 },
+            { "Listings[3].PlotArea", 2022f },
             { "Listings[3].Rent", null },
             { "Listings[3].Floor", null },
             { "Listings[3].ApartmentNumber", null },
@@ -170,6 +174,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[4].Location.Distance.Ocean", null },
 
             { "Listings[4].ObjectType", "Lägenhet" },
+            { "Listings[4].IsNewConstruction", null },
             { "Listings[4].Rooms", 4f },
             { "Listings[4].LivingArea", 90.5f },
             { "Listings[4].AdditionalArea", 0f },

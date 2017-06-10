@@ -40,6 +40,8 @@ namespace Stranne.BooliLib.Models
 
         /// <summary>
         /// Search parameters
+        /// These are not nessesarily the same that where sent in but a parsed version.
+        /// If you use a search option with query, this will contain area id that the query matched with while query property is null.
         /// </summary>
         [JsonProperty("searchParams")]
         public TSearchParameters SearchParameters { get; set; }

@@ -8,6 +8,6 @@ namespace Stranne.BooliLib.Models
         /// <summary>
         /// Is approximate
         /// </summary>
-        public bool? IsApproximate { get; set; } // TODO test
+        public bool? IsApproximate { get; set; }
     }
 }

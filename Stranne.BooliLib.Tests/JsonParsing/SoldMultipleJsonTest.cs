@@ -36,10 +36,11 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[0].Location.Distance.Ocean", 663d },
 
             { "Sold[0].ObjectType", "Villa" },
+            { "Sold[0].IsNewConstruction", null },
             { "Sold[0].Rooms", 4f },
             { "Sold[0].LivingArea", 130f },
             { "Sold[0].AdditionalArea", 30f },
-            { "Sold[0].PlotArea", 1454 },
+            { "Sold[0].PlotArea", 1454f },
             { "Sold[0].Rent", null },
             { "Sold[0].Floor", null },
             { "Sold[0].ApartmentNumber", null },
@@ -71,6 +72,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[1].Location.Distance.Ocean", 608d },
 
             { "Sold[1].ObjectType", "Lägenhet" },
+            { "Sold[1].IsNewConstruction", null },
             { "Sold[1].Rooms", 2f },
             { "Sold[1].LivingArea", 67f },
             { "Sold[1].AdditionalArea", 0f },
@@ -106,6 +108,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[2].Location.Distance.Ocean", 890d },
 
             { "Sold[2].ObjectType", "Lägenhet" },
+            { "Sold[2].IsNewConstruction", null },
             { "Sold[2].Rooms", 2f },
             { "Sold[2].LivingArea", 69f },
             { "Sold[2].AdditionalArea", null },
@@ -141,6 +144,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[3].Location.Distance.Ocean", 85d },
 
             { "Sold[3].ObjectType", "Lägenhet" },
+            { "Sold[3].IsNewConstruction", null },
             { "Sold[3].Rooms", 4f },
             { "Sold[3].LivingArea", 103f },
             { "Sold[3].AdditionalArea", null },
@@ -176,10 +180,11 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[4].Location.Distance.Ocean", 1601d },
 
             { "Sold[4].ObjectType", "Tomt/Mark" },
+            { "Sold[4].IsNewConstruction", null },
             { "Sold[4].Rooms", null },
             { "Sold[4].LivingArea", null },
             { "Sold[4].AdditionalArea", null },
-            { "Sold[4].PlotArea", 801 },
+            { "Sold[4].PlotArea", 801f },
             { "Sold[4].Rent", null },
             { "Sold[4].Floor", null },
             { "Sold[4].ApartmentNumber", null },

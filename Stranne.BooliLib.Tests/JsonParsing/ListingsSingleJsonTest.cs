@@ -34,6 +34,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[0].Location.Distance.Ocean", null },
 
             { "Listings[0].ObjectType", "Lägenhet" },
+            { "Listings[0].IsNewConstruction", true },
             { "Listings[0].Rooms", 2f },
             { "Listings[0].LivingArea", 50.5f },
             { "Listings[0].AdditionalArea", null },

@@ -7,8 +7,6 @@ namespace Stranne.BooliLib.Models
     /// </summary>
     public class Position
     {
-        // TODO add validation?
-
         /// <summary>
         /// Latitude in WGS84 decimal form
         /// </summary>
