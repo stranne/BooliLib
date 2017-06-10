@@ -2,6 +2,8 @@
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/stranne/BooliLib/master/LICENSE)
 
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+
 A simple example project for BooliLib that wrapps the Booli API with its own API with a Swagger definition.
 
 ## Usage
