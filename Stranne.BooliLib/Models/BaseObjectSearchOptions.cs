@@ -120,6 +120,11 @@ namespace Stranne.BooliLib.Models
 
         /// <summary>
         /// Include unset
+        /// Gets or sets if new construction.
+        /// </summary>
+        public bool? IsNewConstruction { get; set; }
+
+        /// <summary>
         /// </summary>
         public bool? IncludeUnset { get; set; }
 

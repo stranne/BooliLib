@@ -81,6 +81,8 @@ namespace Stranne.BooliLib.Tests.Helpers
             { nameof(ListedSearchOption.MaxRooms), 10f, "maxRooms", "10.0" },
             { nameof(ListedSearchOption.MinRooms), 2f, "minRooms", "2.0" },
             { nameof(ListedSearchOption.ObjectTypes), new[] { "Lägenhet", "Villa" }, "objectTypes", "lägenhet,villa" },
+            { nameof(ListedSearchOption.IsNewConstruction), true, "isNewConstruction", "1" },
+            { nameof(ListedSearchOption.IsNewConstruction), false, "isNewConstruction", "0" },
             { nameof(ListedSearchOption.Limit), 10, "limit", "10" },
             { nameof(ListedSearchOption.Offset), 2, "offset", "2" }
         };
@@ -121,6 +123,8 @@ namespace Stranne.BooliLib.Tests.Helpers
             { nameof(SoldSearchOption.MaxRooms), 10f, "maxRooms", "10.0" },
             { nameof(SoldSearchOption.MinRooms), 2.5f, "minRooms", "2.5" },
             { nameof(SoldSearchOption.ObjectTypes), new[] { "Lägenhet", "Villa" }, "objectTypes", "lägenhet,villa" },
+            { nameof(SoldSearchOption.IsNewConstruction), true, "isNewConstruction", "1" },
+            { nameof(SoldSearchOption.IsNewConstruction), false, "isNewConstruction", "0" },
             { nameof(SoldSearchOption.Limit), 10, "limit", "10" },
             { nameof(SoldSearchOption.Offset), 2, "offset", "2" }
         };
