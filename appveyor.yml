@@ -9,6 +9,15 @@ before_build:
 build:
     project: Stranne.BooliLib.sln
     verbosity: quiet
+after_build:
+- cmd: dotnet pack .\Stranne.BooliLib\Stranne.BooliLib.csproj --include-symbols -c Release
+- cmd: appveyor PushArtifact .\Stranne.BooliLib\bin\Release\*.nupkg
+deploy:
+- provider: NuGet
+    symbol_server: https://ci.appveyor.com/nuget/stranne/api/v2/package
+    api_key:
+        secure: sX3oF1ay7qE1cHQnhxKhZswBNxN8P/V9JTxHN6vq07w=
+    artifact: /.*\.symbols\.nupkg/
 before_test:
 - ps: >-
     $nugetPackagePath = $ENV:USERPROFILE + '\.nuget\packages'
