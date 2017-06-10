@@ -8,6 +8,7 @@
     <Authors>Olof Stranne</Authors>
     <TargetFrameworks>netstandard1.3</TargetFrameworks>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DebugType>full</DebugType>
     <AssemblyName>Stranne.BooliLib</AssemblyName>
     <PackageId>Stranne.BooliLib</PackageId>

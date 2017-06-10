@@ -6,76 +6,96 @@ using Stranne.BooliLib.Services;
 
 namespace Stranne.BooliLib
 {
+    /// <summary>
+    /// A service to access information from Booli's Api.
+    /// </summary>
     public class BooliService : IBooliService, IDisposable
     {
         internal readonly BaseService BaseService;
 
+        /// <summary>
+        /// Creates a new Booli service instance.
+        /// </summary>
+        /// <param name="callerId">Caller id provided by Booli.</param>
+        /// <param name="key">Kep provided by Booli.</param>
         public BooliService(string callerId, string key)
         {
             BaseService = new BaseService(callerId, key);
         }
 
+        /// <inheritdoc />
         public async Task<ListedObject> GetListedAsync(int booliId)
         {
             return await BaseService.GetAsync<ListedObject>("listings", booliId);
         }
 
+        /// <inheritdoc />
         public ListedObject GetListed(int booliId)
         {
             return GetListedAsync(booliId).GetAwaiter().GetResult();
         }
 
+        /// <inheritdoc />
         public async Task<BooliResult<ListedObject, ListedSearchOption>> GetListedAsync(ListedSearchOption searchOptions)
         {
             return await BaseService.GetAsync<ListedObject, ListedSearchOption>("listings", searchOptions);
         }
 
-        public BooliResult<ListedObject, ListedSearchOption> GetListed(ListedSearchOption searchOption)
+        /// <inheritdoc />
+        public BooliResult<ListedObject, ListedSearchOption> GetListed(ListedSearchOption searchOptions)
         {
-            return GetListedAsync(searchOption).GetAwaiter().GetResult();
+            return GetListedAsync(searchOptions).GetAwaiter().GetResult();
         }
 
+        /// <inheritdoc />
         public async Task<SoldObject> GetSoldAsync(int booliId)
         {
             return await BaseService.GetAsync<SoldObject>("sold", booliId);
         }
 
+        /// <inheritdoc />
         public SoldObject GetSold(int booliId)
         {
             return GetSoldAsync(booliId).GetAwaiter().GetResult();
         }
 
-        public async Task<BooliResult<SoldObject, SoldSearchOption>> GetSoldAsync(SoldSearchOption searchOption)
+        /// <inheritdoc />
+        public async Task<BooliResult<SoldObject, SoldSearchOption>> GetSoldAsync(SoldSearchOption searchOptions)
         {
-            return await BaseService.GetAsync<SoldObject, SoldSearchOption>("sold", searchOption);
+            return await BaseService.GetAsync<SoldObject, SoldSearchOption>("sold", searchOptions);
         }
 
-        public BooliResult<SoldObject, SoldSearchOption> GetSold(SoldSearchOption searchOption)
+        /// <inheritdoc />
+        public BooliResult<SoldObject, SoldSearchOption> GetSold(SoldSearchOption searchOptions)
         {
-            return GetSoldAsync(searchOption).GetAwaiter().GetResult();
+            return GetSoldAsync(searchOptions).GetAwaiter().GetResult();
         }
 
-        public async Task<BooliResult<Area, AreaSearchOption>> GetAreaAsync(AreaSearchOption searchOption)
+        /// <inheritdoc />
+        public async Task<BooliResult<Area, AreaSearchOption>> GetAreaAsync(AreaSearchOption searchOptions)
         {
-            return await BaseService.GetAsync<Area, AreaSearchOption>("areas", searchOption);
+            return await BaseService.GetAsync<Area, AreaSearchOption>("areas", searchOptions);
         }
 
-        public BooliResult<Area, AreaSearchOption> GetArea(AreaSearchOption searchOption)
+        /// <inheritdoc />
+        public BooliResult<Area, AreaSearchOption> GetArea(AreaSearchOption searchOptions)
         {
-            return GetAreaAsync(searchOption).GetAwaiter().GetResult();
+            return GetAreaAsync(searchOptions).GetAwaiter().GetResult();
         }
 
+        /// <inheritdoc />
         public string GetThumbnailUrl(int booliId)
         {
             return ThumbnailUrlHelper.GetThumbnailUrl(booliId);
         }
 
+        /// <inheritdoc />
         public string GetThumbnailUrl(int booliId, float size)
         {
             return ThumbnailUrlHelper.GetThumbnailUrl(booliId, size: size);
         }
-
-
+        
+        /// <inheritdoc />
         public string GetThumbnailUrl(int booliId, int width, int height)
         {
             return ThumbnailUrlHelper.GetThumbnailUrl(booliId, width, height);
