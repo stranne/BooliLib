@@ -8,32 +8,32 @@ namespace Stranne.BooliLib.Models
     public class SoldSearchOption : BaseObjectSearchOptions
     {
         /// <summary>
-        /// Gets or sets minimum sold price.
+        /// Gets or sets lowest sold price.
         /// </summary>
         public double? MinSoldPrice { get; set; }
 
         /// <summary>
-        /// Gets or sets maximum sold price.
+        /// Gets or sets highest sold price.
         /// </summary>
         public double? MaxSoldPrice { get; set; }
 
         /// <summary>
-        /// Gets or sets minimal sold square meter price.
+        /// Gets or sets lowest sold square meter price.
         /// </summary>
         public double? MinSoldSqmPrice { get; set; }
 
         /// <summary>
-        /// Gets or sets maximum sold square meter price.
+        /// Gets or sets highest sold square meter price.
         /// </summary>
         public double? MaxSoldSqmPrice { get; set; }
 
         /// <summary>
-        /// Gets or sets minimum sold date.
+        /// Gets or sets lowest sold date.
         /// </summary>
         public DateTimeOffset? MinSoldDate { get; set; }
 
         /// <summary>
-        /// Gets or sets maximum sold date.
+        /// Gets or sets highest sold date.
         /// </summary>
         public DateTimeOffset? MaxSoldDate { get; set; }
     }
