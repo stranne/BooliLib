@@ -28,7 +28,7 @@ test_script:
 
     $targetArgs = '-targetargs: test .\Stranne.BooliLib.Tests\Stranne.BooliLib.Tests.csproj -c ' + $ENV:CONFIGURATION
 
-    $filter = '-filter:+[Stranne.BooliLib]* -[Stranne.BooliLib.Tests]*'
+    $filter = '-filter:+[Stranne.BooliLib]* -[Stranne.BooliLib.Tests]* -[Stranne.BooliLib.Examples]*'
 
     $output = '-output:' + $resultsFile
 
