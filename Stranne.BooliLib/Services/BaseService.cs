@@ -45,7 +45,7 @@ namespace Stranne.BooliLib.Services
             var json = await GetAsync(pathUrl);
 
             var jsonObject = JObject.Parse(json);
-            var result = jsonObject[name][0].ToObject<TResult>();
+            var result = JsonConvert.DeserializeObject<TResult>(jsonObject[name][0].ToString(), JsonSerializerSettings);
 
             return result;
         }
@@ -56,9 +56,9 @@ namespace Stranne.BooliLib.Services
         {
             var query = QueryHelper.GetQuery(searchOptions);
             var json = await GetAsync(name, query);
-
+            
             var jsonObject = JObject.Parse(json);
-            var results = jsonObject[name].ToObject<IEnumerable<TResult>>();
+            var results = JsonConvert.DeserializeObject<IEnumerable<TResult>>(jsonObject[name].ToString(), JsonSerializerSettings);
             var booliResult = jsonObject.ToObject<BooliResult<TResult, TSearchOptions>>();
             booliResult.Result = results;
 

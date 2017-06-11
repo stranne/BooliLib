@@ -28,6 +28,7 @@ namespace Stranne.BooliLib.Examples.Api
             // Add framework services.
             services.AddMvc();
 
+            // Aquire caller id and key through app settings or environment, if present.
             var callerId = Configuration.GetValue<string>("BooliCallerId");
             var key = Configuration.GetValue<string>("BooliKey");
 
@@ -36,11 +37,14 @@ namespace Stranne.BooliLib.Examples.Api
                 throw new ArgumentException("BooliCallerId and BooliKey must be set in appsettings or environment.");
             }
 
-            services.AddSwaggerGen(configuration =>
+            services.AddSwaggerGen(c =>
             {
-                configuration.SwaggerDoc("v1", new Info {Title = "Example API", Version = "v1"});
+                c.SwaggerDoc("v1", new Info {Title = "Example API", Version = "v1"});
+                c.DescribeAllEnumsAsStrings();
             });
 
+            // Add IBooliService to .NET Core built in dependency injection service.
+            // Configured as singleton so that the same instance will be reused on injection.
             services.AddSingleton<IBooliService>(provider => new BooliService(callerId, key));
         }
 

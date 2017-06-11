@@ -19,7 +19,8 @@ namespace Stranne.BooliLib.Models
         /// Create a new position.
         /// </summary>
         public Position()
-        { }
+        {
+        }
 
         /// <summary>
         /// Create a position with latitude and longitude pre defined.

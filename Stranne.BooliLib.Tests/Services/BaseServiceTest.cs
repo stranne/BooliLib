@@ -49,7 +49,7 @@ namespace Stranne.BooliLib.Tests.Services
             Assert.Equal(5, actual.Count);
             Assert.Equal(5, actual.Limit);
             Assert.Equal(0, actual.Offset);
-            Assert.Equal(new [] { 76 }, actual.SearchParameters.AreaId);
+            Assert.Equal(new[] {76}, actual.SearchParameters.AreaId);
             Assert.Contains(76, actual.SearchParameters.AreaId);
         }
 

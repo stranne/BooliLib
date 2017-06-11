@@ -46,9 +46,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[0].ApartmentNumber", null },
             { "Sold[0].ConstructionYear", 1918 },
             { "Sold[0].Url", "https://www.booli.se/annons/2330048" },
-
-
-
+            
             { "Sold[1].BooliId", 2310374 },
             { "Sold[1].ListPrice", 2975000d },
             { "Sold[1].Published", new DateTimeOffset(2017, 4, 27, 13, 12, 7, new TimeSpan(2, 0, 0)) },
@@ -82,9 +80,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[1].ApartmentNumber", null },
             { "Sold[1].ConstructionYear", 1988 },
             { "Sold[1].Url", "https://www.booli.se/annons/2310374" },
-
-
-
+            
             { "Sold[2].BooliId", 2331687 },
             { "Sold[2].ListPrice", 2895000d },
             { "Sold[2].Published", new DateTimeOffset(2017, 5, 18, 23, 33, 24, new TimeSpan(2, 0, 0)) },
@@ -118,9 +114,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[2].ApartmentNumber", null },
             { "Sold[2].ConstructionYear", 2009 },
             { "Sold[2].Url", "https://www.booli.se/annons/2331687" },
-
-
-
+            
             { "Sold[3].BooliId", 2311155 },
             { "Sold[3].ListPrice", 9800000d },
             { "Sold[3].Published", new DateTimeOffset(2017, 4, 28, 3, 49, 56, new TimeSpan(2, 0, 0)) },
@@ -154,9 +148,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[3].ApartmentNumber", "1401" },
             { "Sold[3].ConstructionYear", 2014 },
             { "Sold[3].Url", "https://www.booli.se/annons/2311155" },
-
-
-
+            
             { "Sold[4].BooliId", 2321667 },
             { "Sold[4].ListPrice", 4500000d },
             { "Sold[4].Published", new DateTimeOffset(2017, 5, 10, 21, 41, 38, new TimeSpan(2, 0, 0)) },

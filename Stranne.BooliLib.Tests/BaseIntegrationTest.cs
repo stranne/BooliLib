@@ -1,6 +1,4 @@
 ﻿using System.Net.Http;
-using Moq;
-using Stranne.BooliLib.Services;
 using Stranne.BooliLib.Tests.Helpers;
 using Stranne.BooliLib.Tests.Json;
 
@@ -10,8 +8,6 @@ namespace Stranne.BooliLib.Tests
     {
         private string _absoluteUrl;
 
-        private Mock<NetworkService> _networkServiceMock;
-
         private MockHttpMessageHandler _httpMessageHandlerMock;
 
         protected BooliService SetUpTest(string absoluteUrl, JsonFile jsonFile)
@@ -19,7 +15,6 @@ namespace Stranne.BooliLib.Tests
             _absoluteUrl = absoluteUrl;
 
             var (networkServiceMock, httpMessageHandlerMock) = NetworkHelper.SetUpNetworkServiceMock(absoluteUrl, jsonFile);
-            _networkServiceMock = networkServiceMock;
             _httpMessageHandlerMock = httpMessageHandlerMock;
 
             var sut = new BooliService(TestConstants.CallerId, TestConstants.Key);

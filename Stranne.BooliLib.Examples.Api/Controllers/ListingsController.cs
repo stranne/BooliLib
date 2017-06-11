@@ -18,7 +18,7 @@ namespace Stranne.BooliLib.Examples.Api.Controllers
         // GET api/listings
         [HttpGet]
         [Produces(typeof(IEnumerable<ListedObject>))]
-        public async Task<IActionResult> GetAll(ListedSearchOption searchOption)
+        public async Task<IActionResult> Get(ListedSearchOption searchOption)
         {
             return Ok(await _booliService.GetListedAsync(searchOption));
         }

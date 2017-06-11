@@ -29,7 +29,7 @@ namespace Stranne.BooliLib.Tests
             var sut = SetUpTest(absoluteUrl, JsonFile.ListingsMultiple);
             var searchOption = new ListedSearchOption
             {
-                Query = "nacka"
+                Query = TestConstants.Query
             };
             
             var actual = sut.GetListed(searchOption);
@@ -61,7 +61,7 @@ namespace Stranne.BooliLib.Tests
             var sut = SetUpTest(absoluteUrl, JsonFile.SoldMultiple);
             var searchOption = new SoldSearchOption
             {
-                Query = "nacka"
+                Query = TestConstants.Query
             };
 
             var actual = sut.GetSold(searchOption);
@@ -79,7 +79,7 @@ namespace Stranne.BooliLib.Tests
             var sut = SetUpTest(absoluteUrl, JsonFile.Area);
             var searchOption = new AreaSearchOption
             {
-                Query = "nacka"
+                Query = TestConstants.Query
             };
 
             var actual = sut.GetArea(searchOption);

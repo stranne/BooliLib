@@ -45,9 +45,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[0].ConstructionYear", 1964 },
             { "Listings[0].Url", "https://www.booli.se/annons/2347066" },
             { "Listings[0].Pageviews", null },
-
-
-
+            
             { "Listings[1].BooliId", 2341646 },
             { "Listings[1].ListPrice", 2195000d },
             { "Listings[1].Published", new DateTimeOffset(2017, 6, 6, 1, 3, 21, new TimeSpan(2, 0, 0)) },
@@ -80,9 +78,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[1].ConstructionYear", null },
             { "Listings[1].Url", "https://www.booli.se/annons/2341646" },
             { "Listings[1].Pageviews", null },
-
-
-
+            
             { "Listings[2].BooliId", 2343172 },
             { "Listings[2].ListPrice", 2895000d },
             { "Listings[2].Published", new DateTimeOffset(2017, 6, 5, 23, 30, 9, new TimeSpan(2, 0, 0)) },
@@ -116,8 +112,6 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[2].Url", "https://www.booli.se/annons/2343172" },
             { "Listings[2].Pageviews", null },
             
-
-
             { "Listings[3].BooliId", 2346696 },
             { "Listings[3].ListPrice", 16900000d },
             { "Listings[3].Published", new DateTimeOffset(2017, 6, 5, 19, 28, 22, new TimeSpan(2, 0, 0)) },
@@ -150,9 +144,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[3].ConstructionYear", 2004 },
             { "Listings[3].Url", "https://www.booli.se/annons/2346696" },
             { "Listings[3].Pageviews", null },
-
-
-
+            
             { "Listings[4].BooliId", 2346548 },
             { "Listings[4].ListPrice", 5395000d },
             { "Listings[4].Published", new DateTimeOffset(2017, 6, 5, 16, 7, 45, new TimeSpan(2, 0, 0)) },

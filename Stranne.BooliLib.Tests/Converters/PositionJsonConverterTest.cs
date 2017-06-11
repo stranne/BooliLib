@@ -19,7 +19,7 @@ namespace Stranne.BooliLib.Tests.Converters
         [MemberData(nameof(WriteJsonMemberData))]
         public void WriteJson(PositionSerializable value, string expected)
         {
-            var actual = JsonConvert.SerializeObject((Position)value, new PositionJsonConverter());
+            var actual = JsonConvert.SerializeObject(value, new PositionJsonConverter());
 
             Assert.Equal(expected, actual);
         }
