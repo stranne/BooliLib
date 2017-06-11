@@ -10,8 +10,8 @@ namespace Stranne.BooliLib.Tests.Converters
     {
         public static TheoryData WriteJsonMemberData => new TheoryData<IntArraySerializable, string>
         {
-            {new IntArraySerializable(new[] {1}), "1"},
-            {new IntArraySerializable(new[] {1, 2}), "1,2"}
+            { new IntArraySerializable(new[] { 1 }), "1" },
+            { new IntArraySerializable(new[] { 1, 2 }), "1,2" }
         };
 
         [Theory]
@@ -25,7 +25,7 @@ namespace Stranne.BooliLib.Tests.Converters
 
         public static TheoryData ReadJsonData => new TheoryData<string, int[]>
         {
-            {"1", new[] {1} }
+            { "1", new[] { 1 } }
         };
 
         [Theory]
