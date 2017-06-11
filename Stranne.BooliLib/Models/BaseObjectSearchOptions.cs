@@ -92,7 +92,7 @@ namespace Stranne.BooliLib.Models
         /// <summary>
         /// Gets or sets accommodation types.
         /// </summary>
-        public string[] ObjectTypes { get; set; }
+        public ObjectType[] ObjectTypes { get; set; }
 
         /// <summary>
         /// Gets or sets lowest construction year.

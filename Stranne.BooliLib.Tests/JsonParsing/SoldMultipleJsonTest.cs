@@ -1,4 +1,5 @@
 ﻿using System;
+using Stranne.BooliLib.Models;
 using Stranne.BooliLib.Tests.Json;
 using Stranne.BooliLib.Tests.Models;
 using Xunit;
@@ -35,7 +36,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[0].Location.Position.IsApproximate", null },
             { "Sold[0].Location.Distance.Ocean", 663d },
 
-            { "Sold[0].ObjectType", "Villa" },
+            { "Sold[0].ObjectType", ObjectType.Villa },
             { "Sold[0].IsNewConstruction", null },
             { "Sold[0].Rooms", 4f },
             { "Sold[0].LivingArea", 130f },
@@ -69,7 +70,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[1].Location.Position.IsApproximate", null },
             { "Sold[1].Location.Distance.Ocean", 608d },
 
-            { "Sold[1].ObjectType", "Lägenhet" },
+            { "Sold[1].ObjectType", ObjectType.Lägenhet },
             { "Sold[1].IsNewConstruction", null },
             { "Sold[1].Rooms", 2f },
             { "Sold[1].LivingArea", 67f },
@@ -103,7 +104,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[2].Location.Position.IsApproximate", null },
             { "Sold[2].Location.Distance.Ocean", 890d },
 
-            { "Sold[2].ObjectType", "Lägenhet" },
+            { "Sold[2].ObjectType", ObjectType.Lägenhet },
             { "Sold[2].IsNewConstruction", null },
             { "Sold[2].Rooms", 2f },
             { "Sold[2].LivingArea", 69f },
@@ -137,7 +138,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[3].Location.Position.IsApproximate", null },
             { "Sold[3].Location.Distance.Ocean", 85d },
 
-            { "Sold[3].ObjectType", "Lägenhet" },
+            { "Sold[3].ObjectType", ObjectType.Lägenhet },
             { "Sold[3].IsNewConstruction", null },
             { "Sold[3].Rooms", 4f },
             { "Sold[3].LivingArea", 103f },
@@ -171,7 +172,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[4].Location.Position.IsApproximate", null },
             { "Sold[4].Location.Distance.Ocean", 1601d },
 
-            { "Sold[4].ObjectType", "Tomt/Mark" },
+            { "Sold[4].ObjectType", ObjectType.TomtMark },
             { "Sold[4].IsNewConstruction", null },
             { "Sold[4].Rooms", null },
             { "Sold[4].LivingArea", null },

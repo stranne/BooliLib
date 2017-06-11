@@ -1,4 +1,5 @@
 ﻿using System;
+using Stranne.BooliLib.Models;
 using Stranne.BooliLib.Tests.Json;
 using Stranne.BooliLib.Tests.Models;
 using Xunit;
@@ -35,7 +36,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Sold[0].Location.Position.IsApproximate", true },
             { "Sold[0].Location.Distance.Ocean", null },
 
-            { "Sold[0].ObjectType", "Lägenhet" },
+            { "Sold[0].ObjectType", ObjectType.Lägenhet },
             { "Sold[0].IsNewConstruction", null },
             { "Sold[0].Rooms", 3f },
             { "Sold[0].LivingArea", 73f },

@@ -1,4 +1,5 @@
 ﻿using System;
+using Stranne.BooliLib.Models;
 using Stranne.BooliLib.Tests.Json;
 using Stranne.BooliLib.Tests.Models;
 using Xunit;
@@ -33,7 +34,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[0].Location.Position.IsApproximate", null },
             { "Listings[0].Location.Distance.Ocean", null },
 
-            { "Listings[0].ObjectType", "Lägenhet" },
+            { "Listings[0].ObjectType", ObjectType.Lägenhet },
             { "Listings[0].IsNewConstruction", null },
             { "Listings[0].Rooms", 1f },
             { "Listings[0].LivingArea", 24f },
@@ -66,7 +67,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[1].Location.Position.IsApproximate", null },
             { "Listings[1].Location.Distance.Ocean", null },
 
-            { "Listings[1].ObjectType", "Lägenhet" },
+            { "Listings[1].ObjectType", ObjectType.Lägenhet },
             { "Listings[1].IsNewConstruction", null },
             { "Listings[1].Rooms", 2f },
             { "Listings[1].LivingArea", 63.5f },
@@ -99,7 +100,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[2].Location.Position.IsApproximate", null },
             { "Listings[2].Location.Distance.Ocean", null },
 
-            { "Listings[2].ObjectType", "Lägenhet" },
+            { "Listings[2].ObjectType", ObjectType.Lägenhet },
             { "Listings[2].IsNewConstruction", null },
             { "Listings[2].Rooms", 2f },
             { "Listings[2].LivingArea", 58f },
@@ -132,7 +133,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[3].Location.Position.IsApproximate", null },
             { "Listings[3].Location.Distance.Ocean", null },
 
-            { "Listings[3].ObjectType", "Villa" },
+            { "Listings[3].ObjectType", ObjectType.Villa },
             { "Listings[3].IsNewConstruction", null },
             { "Listings[3].Rooms", 8f },
             { "Listings[3].LivingArea", 240f },
@@ -165,7 +166,7 @@ namespace Stranne.BooliLib.Tests.JsonParsing
             { "Listings[4].Location.Position.IsApproximate", null },
             { "Listings[4].Location.Distance.Ocean", null },
 
-            { "Listings[4].ObjectType", "Lägenhet" },
+            { "Listings[4].ObjectType", ObjectType.Lägenhet },
             { "Listings[4].IsNewConstruction", null },
             { "Listings[4].Rooms", 4f },
             { "Listings[4].LivingArea", 90.5f },

@@ -28,6 +28,7 @@ namespace Stranne.BooliLib.Tests
             typeof(ListedObject),
             typeof(ListedSearchOption),
             typeof(LocationResult),
+            typeof(ObjectType),
             typeof(Position),
             typeof(PositionResult),
             typeof(Region),

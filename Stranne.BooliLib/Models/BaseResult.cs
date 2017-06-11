@@ -30,7 +30,7 @@ namespace Stranne.BooliLib.Models
         /// <summary>
         /// Gets or sets object type.
         /// </summary>
-        public string ObjectType { get; set; }
+        public ObjectType ObjectType { get; set; }
 
         /// <summary>
         /// Gets or sets estate agent.

@@ -28,7 +28,9 @@ namespace Stranne.BooliLib.Services
                 new IntArrayJsonConverter(), 
                 new BoxCoordinatesJsonConverter(),
                 new PositionJsonConverter(),
-                new DimensionJsonConverter()
+                new DimensionJsonConverter(),
+                new ObjectTypeArrayJsonConverter(),
+                new ObjectTypeJsonConverter()
             },
             ContractResolver = new CamelCasePropertyNamesContractResolver()
         };
