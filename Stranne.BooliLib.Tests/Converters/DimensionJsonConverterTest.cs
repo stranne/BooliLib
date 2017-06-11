@@ -11,7 +11,7 @@ namespace Stranne.BooliLib.Tests.Converters
     {
         public static TheoryData WriteJsonMemberData => new TheoryData<DimensionSerializable, string>
         {
-            {new DimensionSerializable(1, 2), "1,2"}
+            { new DimensionSerializable(1, 2), "1,2" }
         };
 
         [Theory]

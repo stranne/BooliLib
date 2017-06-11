@@ -39,7 +39,7 @@ namespace Stranne.BooliLib.Examples.Api
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info {Title = "Example API", Version = "v1"});
+                c.SwaggerDoc("v1", new Info { Title = "Example API", Version = "v1" });
                 c.DescribeAllEnumsAsStrings();
             });
 

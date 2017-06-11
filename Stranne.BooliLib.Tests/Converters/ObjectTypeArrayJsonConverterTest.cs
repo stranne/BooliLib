@@ -32,22 +32,6 @@ namespace Stranne.BooliLib.Tests.Converters
             Assert.Throws<NotImplementedException>(() => new ObjectTypeArrayJsonConverter().ReadJson(null, null, null, null));
         }
 
-        //[Theory]
-        //[InlineData("lägenhet", ObjectType.Lägenhet)]
-        //[InlineData("tomt-mark", ObjectType.TomtMark)]
-        //[InlineData("fritidshus", ObjectType.Fritidshus)]
-        //[InlineData("gård", ObjectType.Gård)]
-        //[InlineData("kedjehus", ObjectType.Kedjehus)]
-        //[InlineData("parhus", ObjectType.Parhus)]
-        //[InlineData("radhus", ObjectType.Radhus)]
-        //[InlineData("villa", ObjectType.Villa)]
-        //public void ReadJson(string value, ObjectType expected)
-        //{
-        //    var actual = JsonConvert.DeserializeObject<ObjectType>(value, new ObjectTypeArrayJsonConverter());
-
-        //    Assert.Equal(expected, actual);
-        //}
-
         [Fact]
         public void CanRead()
         {

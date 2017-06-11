@@ -11,8 +11,8 @@ namespace Stranne.BooliLib.Tests.Converters
     {
         public static TheoryData WriteJsonMemberData => new TheoryData<StringArraySerializable, string>
         {
-            {new StringArraySerializable(new[] { "1" }), "1"},
-            {new StringArraySerializable(new[] { "1", "2" }), "1,2"}
+            { new StringArraySerializable(new[] { "1" }), "1" },
+            { new StringArraySerializable(new[] { "1", "2" }), "1,2" }
         };
 
         [Theory]

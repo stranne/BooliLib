@@ -12,7 +12,7 @@ namespace Stranne.BooliLib.Tests.Converters
     {
         public static TheoryData WriteJsonMemberData => new TheoryData<PositionSerializable, string>
         {
-            {new PositionSerializable(57, 12), "57,12"}
+            { new PositionSerializable(57, 12), "57,12" }
         };
 
         [Theory]
